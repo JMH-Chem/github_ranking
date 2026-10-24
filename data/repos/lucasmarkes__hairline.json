@@ -1,0 +1,26 @@
+{
+  "repo": "lucasmarkes/hairline",
+  "first_seen": "2026-W43",
+  "url": "https://github.com/lucasmarkes/hairline",
+  "description": "Isometric line figures that answer the pointer. For React and for anything with a DOM.",
+  "homepage": "https://hairline.lucasmarkes.com",
+  "language": "TypeScript",
+  "topics": [
+    "animation",
+    "isometric",
+    "react",
+    "shadcn",
+    "svg",
+    "typescript"
+  ],
+  "license": "MIT",
+  "stars": 2838,
+  "forks": 176,
+  "open_issues": 5,
+  "created_at": "2026-10-01T13:52:19Z",
+  "pushed_at": "2026-10-14T20:33:03Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/66750157?v=4",
+  "last_seen": "2026-W43"
+}

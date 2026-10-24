@@ -1,0 +1,29 @@
+{
+  "repo": "MeteorNOX/DeepSeek-Balance-Whale-Widget",
+  "first_seen": "2026-W43",
+  "url": "https://github.com/MeteorNOX/DeepSeek-Balance-Whale-Widget",
+  "description": "DeepSeek Harness（DSH）一只住在 DSH 界面右下角的小鲸鱼娘，帮你盯着DeepSeek账户余额。QQ弹弹，支持拖拽吸附、左吸附翻转、数字滚动动画，随界面自动启用，建议直接喊来你的dsh安装",
+  "homepage": null,
+  "language": "JavaScript",
+  "topics": [
+    "cordis",
+    "deepseek",
+    "deepseek-harness",
+    "developer-tools",
+    "dsh",
+    "dsh-plugin",
+    "dsh-plugins",
+    "floating-widget",
+    "plugin"
+  ],
+  "license": "MIT",
+  "stars": 5976,
+  "forks": 193,
+  "open_issues": 122,
+  "created_at": "2026-08-18T03:13:51Z",
+  "pushed_at": "2026-10-11T12:25:55Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/247166461?v=4",
+  "last_seen": "2026-W43"
+}

@@ -1,0 +1,32 @@
+{
+  "repo": "mdpsec/bug-bounty-hunting-prompts",
+  "first_seen": "2026-W43",
+  "url": "https://github.com/mdpsec/bug-bounty-hunting-prompts",
+  "description": "Reusable prompts for a structured, evidence-first bug bounty hunting workflow",
+  "homepage": "https://mdpsec.com",
+  "language": null,
+  "topics": [
+    "application-security",
+    "bug-bounty",
+    "bug-bounty-hunting",
+    "cybersecurity",
+    "llm-prompts",
+    "open-source",
+    "penetration-testing",
+    "prompt-engineering",
+    "responsible-disclosure",
+    "security-research",
+    "vulnerability-research",
+    "web-security"
+  ],
+  "license": "MIT",
+  "stars": 759,
+  "forks": 155,
+  "open_issues": 0,
+  "created_at": "2026-09-30T05:43:35Z",
+  "pushed_at": "2026-10-03T06:57:03Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/330721921?v=4",
+  "last_seen": "2026-W43"
+}

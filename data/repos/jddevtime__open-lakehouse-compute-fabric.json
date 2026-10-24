@@ -1,0 +1,29 @@
+{
+  "repo": "jddevtime/open-lakehouse-compute-fabric",
+  "first_seen": "2026-W43",
+  "url": "https://github.com/jddevtime/open-lakehouse-compute-fabric",
+  "description": "Open Lakehouse Compute Fabric: an open-source lakehouse platform with Microsoft Fabric Compute Extension.",
+  "homepage": null,
+  "language": "Python",
+  "topics": [
+    "apache-iceberg",
+    "apache-spark",
+    "data-engineering",
+    "delta-lake",
+    "lakehouse",
+    "mcp",
+    "microsoft-fabric",
+    "onelake",
+    "python"
+  ],
+  "license": "Apache-2.0",
+  "stars": 276,
+  "forks": 275,
+  "open_issues": 1,
+  "created_at": "2026-10-12T04:23:06Z",
+  "pushed_at": "2026-10-19T12:59:40Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/154368590?v=4",
+  "last_seen": "2026-W43"
+}

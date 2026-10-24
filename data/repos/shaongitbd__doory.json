@@ -1,0 +1,33 @@
+{
+  "repo": "shaongitbd/doory",
+  "first_seen": "2026-W43",
+  "url": "https://github.com/shaongitbd/doory",
+  "description": "Open source canva alternative",
+  "homepage": "https://doory.art",
+  "language": "TypeScript",
+  "topics": [
+    "canva-alternative",
+    "collaborative-editing",
+    "design-editor",
+    "design-tool",
+    "django",
+    "fabricjs",
+    "graphic-design",
+    "mcp-server",
+    "open-source",
+    "react",
+    "self-hosted",
+    "typescript",
+    "yjs"
+  ],
+  "license": null,
+  "stars": 1816,
+  "forks": 140,
+  "open_issues": 14,
+  "created_at": "2026-10-10T00:03:25Z",
+  "pushed_at": "2026-10-23T09:10:55Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/83664154?v=4",
+  "last_seen": "2026-W43"
+}

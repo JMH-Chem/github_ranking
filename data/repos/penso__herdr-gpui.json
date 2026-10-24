@@ -1,0 +1,29 @@
+{
+  "repo": "penso/herdr-gpui",
+  "first_seen": "2026-W43",
+  "url": "https://github.com/penso/herdr-gpui",
+  "description": "Native client for Herdr on macOS, Linux, and Windows, built with Rust and GPUI. View terminal sessions, workspaces, Git worktrees, and agent activity through your local Herdr daemon.",
+  "homepage": "https://herdrui.dev",
+  "language": "Rust",
+  "topics": [
+    "ai-agents",
+    "desktop-app",
+    "developer-tools",
+    "git-worktrees",
+    "gpui",
+    "herdr",
+    "macos",
+    "rust",
+    "terminal"
+  ],
+  "license": "Apache-2.0",
+  "stars": 1661,
+  "forks": 137,
+  "open_issues": 64,
+  "created_at": "2026-09-20T05:22:39Z",
+  "pushed_at": "2026-10-24T17:39:29Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/7703?v=4",
+  "last_seen": "2026-W43"
+}

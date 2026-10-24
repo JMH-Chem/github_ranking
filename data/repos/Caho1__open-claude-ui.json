@@ -1,0 +1,30 @@
+{
+  "repo": "Caho1/open-claude-ui",
+  "first_seen": "2026-W43",
+  "url": "https://github.com/Caho1/open-claude-ui",
+  "description": "基于 REA 深度拆解并高保真还原 Claude 官方桌面端 UI。还原 30 个独立 React 组件与 8 项硬核交互物理算法，附带 3000+ 行逆向分析手册。",
+  "homepage": "https://openclaudeui.com",
+  "language": "TypeScript",
+  "topics": [
+    "anthropic",
+    "audioworklet",
+    "claude",
+    "design-system",
+    "framer-motion",
+    "motion-physics",
+    "react",
+    "reverse-engineering",
+    "tailwindcss",
+    "ui-components"
+  ],
+  "license": "MIT",
+  "stars": 1395,
+  "forks": 275,
+  "open_issues": 1,
+  "created_at": "2026-10-14T14:05:05Z",
+  "pushed_at": "2026-10-21T08:39:17Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/124897849?v=4",
+  "last_seen": "2026-W43"
+}

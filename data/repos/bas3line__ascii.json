@@ -1,0 +1,28 @@
+{
+  "repo": "bas3line/ascii",
+  "first_seen": "2026-W43",
+  "url": "https://github.com/bas3line/ascii",
+  "description": "Animated ascii art for web pages, in TypeScript: React, Next.js, Astro, or one HTML tag",
+  "homepage": "https://ascii.rest",
+  "language": "TypeScript",
+  "topics": [
+    "animation",
+    "ascii",
+    "ascii-art",
+    "astro",
+    "nextjs",
+    "react",
+    "typescript",
+    "web-components"
+  ],
+  "license": "MIT",
+  "stars": 1016,
+  "forks": 63,
+  "open_issues": 5,
+  "created_at": "2026-10-07T06:48:54Z",
+  "pushed_at": "2026-10-23T22:32:00Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/196133609?v=4",
+  "last_seen": "2026-W43"
+}

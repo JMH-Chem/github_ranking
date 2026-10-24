@@ -1,0 +1,29 @@
+{
+  "repo": "Haryy985/yunkun-console-preview",
+  "first_seen": "2026-W43",
+  "url": "https://github.com/Haryy985/yunkun-console-preview",
+  "description": "云鲲自动化渗透控制台：功能介绍、使用流程、新增与优化、界面预览。当前仓库仅含文章与截图，暂无产品源码。",
+  "homepage": null,
+  "language": "Go",
+  "topics": [
+    "aiagent",
+    "aisecurity",
+    "cybersecurity",
+    "network-security",
+    "penetration-testing",
+    "penetration-testing-tools",
+    "red-team",
+    "security-automation",
+    "vulnerability-assessment"
+  ],
+  "license": null,
+  "stars": 135,
+  "forks": 8,
+  "open_issues": 0,
+  "created_at": "2026-10-15T02:45:34Z",
+  "pushed_at": "2026-10-22T09:14:02Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/181617185?v=4",
+  "last_seen": "2026-W43"
+}

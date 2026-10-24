@@ -1,0 +1,27 @@
+{
+  "repo": "TNTcraftHIM/Piik",
+  "first_seen": "2026-W43",
+  "url": "https://github.com/TNTcraftHIM/Piik",
+  "description": "Free, open-source screen sharing for private live streams with friends. Watch together in a browser or self-host Piik. 免费开源的私密屏幕共享，支持游戏直播、一起看电影与自部署。",
+  "homepage": "https://piik.tv",
+  "language": "TypeScript",
+  "topics": [
+    "live-streaming",
+    "p2p",
+    "private-streaming",
+    "screen-sharing",
+    "self-hosted",
+    "watch-together",
+    "webrtc"
+  ],
+  "license": "MIT",
+  "stars": 3697,
+  "forks": 226,
+  "open_issues": 2,
+  "created_at": "2026-08-18T05:34:01Z",
+  "pushed_at": "2026-10-24T16:42:01Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/35992542?v=4",
+  "last_seen": "2026-W43"
+}
