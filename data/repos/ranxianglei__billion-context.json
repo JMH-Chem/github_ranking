@@ -1,0 +1,21 @@
+{
+  "repo": "ranxianglei/billion-context",
+  "first_seen": "2026-W43",
+  "url": "https://github.com/ranxianglei/billion-context",
+  "description": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need",
+  "homepage": null,
+  "language": "TypeScript",
+  "topics": [
+    "dsh-plugin"
+  ],
+  "license": null,
+  "stars": 2583,
+  "forks": 220,
+  "open_issues": 306,
+  "created_at": "2026-08-06T08:27:34Z",
+  "pushed_at": "2026-10-24T17:56:14Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/12445698?v=4",
+  "last_seen": "2026-W43"
+}

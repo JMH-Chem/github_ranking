@@ -1,0 +1,31 @@
+{
+  "repo": "bannedbook/fanqiang",
+  "first_seen": "2026-W43",
+  "url": "https://github.com/bannedbook/fanqiang",
+  "description": "翻墙-科学上网",
+  "homepage": null,
+  "language": "Kotlin",
+  "topics": [
+    "brook",
+    "daze",
+    "fanqiang",
+    "goflyway",
+    "lightsocks",
+    "proxy",
+    "psiphon",
+    "shadowsocks",
+    "ssr",
+    "trojan",
+    "v2ray"
+  ],
+  "license": null,
+  "stars": 55808,
+  "forks": 8686,
+  "open_issues": 338,
+  "created_at": "2015-01-14T00:34:25Z",
+  "pushed_at": "2026-09-13T05:26:36Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/4361923?v=4",
+  "last_seen": "2026-W43"
+}

@@ -1,0 +1,19 @@
+{
+  "repo": "storytold/gridcraft",
+  "first_seen": "2026-W43",
+  "url": "https://github.com/storytold/gridcraft",
+  "description": "GridCraft: an open-source, clean-room spreadsheet (Microsoft Excel-style) in pure Rust. By ArtCraft.",
+  "homepage": null,
+  "language": "Rust",
+  "topics": [],
+  "license": "Apache-2.0",
+  "stars": 6414,
+  "forks": 2978,
+  "open_issues": 1171,
+  "created_at": "2026-10-07T05:18:16Z",
+  "pushed_at": "2026-10-24T11:58:13Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/76897702?v=4",
+  "last_seen": "2026-W43"
+}

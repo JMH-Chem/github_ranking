@@ -1,0 +1,27 @@
+{
+  "repo": "LibreSpark/LibreTV",
+  "first_seen": "2026-W43",
+  "url": "https://github.com/LibreSpark/LibreTV",
+  "description": "一分钟搭建影视站，支持Docker等部署方式",
+  "homepage": "https://libretv.is-an.org",
+  "language": "TypeScript",
+  "topics": [
+    "css",
+    "film",
+    "html",
+    "movie-web-app",
+    "movies-and-cinemas",
+    "nextjs",
+    "tv"
+  ],
+  "license": "AGPL-3.0",
+  "stars": 21597,
+  "forks": 29991,
+  "open_issues": 8,
+  "created_at": "2025-04-06T10:52:08Z",
+  "pushed_at": "2026-10-24T05:26:26Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/207667577?v=4",
+  "last_seen": "2026-W43"
+}

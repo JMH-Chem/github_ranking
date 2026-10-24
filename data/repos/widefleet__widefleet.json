@@ -1,0 +1,30 @@
+{
+  "repo": "widefleet/widefleet",
+  "first_seen": "2026-W43",
+  "url": "https://github.com/widefleet/widefleet",
+  "description": "Platform for agent-built apps and workflows",
+  "homepage": "https://widefleet.com",
+  "language": "TypeScript",
+  "topics": [
+    "citizen-developer",
+    "database",
+    "deployment",
+    "developer-tools",
+    "docker",
+    "internal-tools",
+    "rust",
+    "self-hosted",
+    "sso",
+    "svelte"
+  ],
+  "license": "MIT",
+  "stars": 54,
+  "forks": 4,
+  "open_issues": 4,
+  "created_at": "2026-10-09T11:45:35Z",
+  "pushed_at": "2026-10-23T22:12:47Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/338510189?v=4",
+  "last_seen": "2026-W43"
+}

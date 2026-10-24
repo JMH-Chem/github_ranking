@@ -1,0 +1,28 @@
+{
+  "repo": "zero-lab-ai/skills",
+  "first_seen": "2026-W43",
+  "url": "https://github.com/zero-lab-ai/skills",
+  "description": "Portable, evidence-bound security skills for authorized defensive assessment, red teaming, penetration testing, detection engineering, and engagement operations.",
+  "homepage": "https://zero-lab.ai",
+  "language": "Python",
+  "topics": [
+    "agent-skills",
+    "ai-security",
+    "blue-team",
+    "claude-code",
+    "codex",
+    "penetration-testing",
+    "red-team",
+    "security"
+  ],
+  "license": "Apache-2.0",
+  "stars": 281,
+  "forks": 14,
+  "open_issues": 0,
+  "created_at": "2026-10-11T15:14:54Z",
+  "pushed_at": "2026-10-15T15:45:42Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/261683058?v=4",
+  "last_seen": "2026-W43"
+}

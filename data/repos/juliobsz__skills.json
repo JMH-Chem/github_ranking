@@ -1,0 +1,32 @@
+{
+  "repo": "juliobsz/skills",
+  "first_seen": "2026-W43",
+  "url": "https://github.com/juliobsz/skills",
+  "description": "An agent skill that builds award-caliber websites from one line",
+  "homepage": null,
+  "language": "JavaScript",
+  "topics": [
+    "agent-skills",
+    "astro",
+    "awwwards",
+    "claude-code",
+    "claude-skills",
+    "codex",
+    "creative-coding",
+    "frontend",
+    "gsap",
+    "nextjs",
+    "web-design",
+    "webgl"
+  ],
+  "license": "MIT",
+  "stars": 930,
+  "forks": 37,
+  "open_issues": 0,
+  "created_at": "2026-10-12T00:07:32Z",
+  "pushed_at": "2026-10-20T00:06:53Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/68253526?v=4",
+  "last_seen": "2026-W43"
+}

@@ -1,0 +1,21 @@
+{
+  "repo": "android/skills",
+  "first_seen": "2026-W43",
+  "url": "https://github.com/android/skills",
+  "description": null,
+  "homepage": null,
+  "language": "Kotlin",
+  "topics": [
+    "skills"
+  ],
+  "license": "Apache-2.0",
+  "stars": 9568,
+  "forks": 618,
+  "open_issues": 34,
+  "created_at": "2026-03-16T12:41:46Z",
+  "pushed_at": "2026-10-23T14:35:29Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/32689599?v=4",
+  "last_seen": "2026-W43"
+}

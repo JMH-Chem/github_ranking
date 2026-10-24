@@ -1,0 +1,27 @@
+{
+  "repo": "dharmendradevops11/the-self-healing-pipeline",
+  "first_seen": "2026-W43",
+  "url": "https://github.com/dharmendradevops11/the-self-healing-pipeline",
+  "description": "Companion code for the book The Self-Healing Pipeline: How I Taught My CI/CD Pipeline to Fix Itself at 2 AM",
+  "homepage": null,
+  "language": "Python",
+  "topics": [
+    "aiops",
+    "aws",
+    "bedrock",
+    "ci-cd",
+    "devops",
+    "self-healing",
+    "sre"
+  ],
+  "license": "Apache-2.0",
+  "stars": 70,
+  "forks": 47,
+  "open_issues": 0,
+  "created_at": "2026-10-13T15:31:20Z",
+  "pushed_at": "2026-10-13T15:31:27Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/78291703?v=4",
+  "last_seen": "2026-W43"
+}

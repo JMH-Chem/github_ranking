@@ -1,0 +1,26 @@
+{
+  "repo": "pgrundev/pgbot",
+  "first_seen": "2026-W43",
+  "url": "https://github.com/pgrundev/pgbot",
+  "description": "Postgres intelligence for ai agents",
+  "homepage": "https://pgbot.dev",
+  "language": "Go",
+  "topics": [
+    "ai",
+    "data-analysis",
+    "database",
+    "postgres",
+    "postgresql",
+    "postgresql-database"
+  ],
+  "license": null,
+  "stars": 1455,
+  "forks": 72,
+  "open_issues": 19,
+  "created_at": "2026-08-11T23:41:52Z",
+  "pushed_at": "2026-10-19T21:06:39Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/300654937?v=4",
+  "last_seen": "2026-W43"
+}

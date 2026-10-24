@@ -1,0 +1,19 @@
+{
+  "repo": "Niko1221/Strata",
+  "first_seen": "2026-W43",
+  "url": "https://github.com/Niko1221/Strata",
+  "description": "Qwen3.8-Flash-Next on any consumer hardware: one-click install for Windows / Linux. Strata inference engine, OpenAI/Anthropic API on localhost, optional image input.",
+  "homepage": null,
+  "language": "C++",
+  "topics": [],
+  "license": "MIT",
+  "stars": 31827,
+  "forks": 3410,
+  "open_issues": 834,
+  "created_at": "2026-09-24T16:40:20Z",
+  "pushed_at": "2026-10-24T09:19:58Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/86886444?v=4",
+  "last_seen": "2026-W43"
+}

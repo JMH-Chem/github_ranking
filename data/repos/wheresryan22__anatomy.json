@@ -1,0 +1,24 @@
+{
+  "repo": "wheresryan22/anatomy",
+  "first_seen": "2026-W43",
+  "url": "https://github.com/wheresryan22/anatomy",
+  "description": "An agent skill for creating detailed, interactive isometric illustrations of real-world machines and complex systems. Generates polished SVGs with optional WebGL shaders and 3D effects.",
+  "homepage": "https://skills.wheresryan.sh/anatomy",
+  "language": "JavaScript",
+  "topics": [
+    "agent-skill",
+    "open-source",
+    "svg",
+    "vizualization"
+  ],
+  "license": "MIT",
+  "stars": 20063,
+  "forks": 1575,
+  "open_issues": 66,
+  "created_at": "2026-10-08T10:12:49Z",
+  "pushed_at": "2026-10-18T20:20:24Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/96392276?v=4",
+  "last_seen": "2026-W43"
+}

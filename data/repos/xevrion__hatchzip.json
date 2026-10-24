@@ -1,0 +1,32 @@
+{
+  "repo": "xevrion/hatchzip",
+  "first_seen": "2026-W43",
+  "url": "https://github.com/xevrion/hatchzip",
+  "description": "Extract huge archives in place: the archive shrinks as your files hatch, so you only need room for the output. ZIP, 7z, tar, split archives.",
+  "homepage": "https://hatchzip.dev",
+  "language": "Rust",
+  "topics": [
+    "7z",
+    "archive",
+    "cli",
+    "crash-safe",
+    "disk-space",
+    "extract",
+    "extractor",
+    "gui",
+    "rust",
+    "tar",
+    "unzip",
+    "zip"
+  ],
+  "license": "Apache-2.0",
+  "stars": 1580,
+  "forks": 36,
+  "open_issues": 6,
+  "created_at": "2026-10-21T17:29:28Z",
+  "pushed_at": "2026-10-24T17:04:55Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/77008538?v=4",
+  "last_seen": "2026-W43"
+}

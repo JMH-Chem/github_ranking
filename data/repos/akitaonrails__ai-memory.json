@@ -1,0 +1,19 @@
+{
+  "repo": "akitaonrails/ai-memory",
+  "first_seen": "2026-W43",
+  "url": "https://github.com/akitaonrails/ai-memory",
+  "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
+  "homepage": null,
+  "language": "Rust",
+  "topics": [],
+  "license": "MIT",
+  "stars": 13219,
+  "forks": 928,
+  "open_issues": 54,
+  "created_at": "2026-05-21T23:23:51Z",
+  "pushed_at": "2026-10-23T01:47:40Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/2840?v=4",
+  "last_seen": "2026-W43"
+}

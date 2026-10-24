@@ -1,0 +1,31 @@
+{
+  "repo": "styczynski/bioseqdb",
+  "first_seen": "2026-W43",
+  "url": "https://github.com/styczynski/bioseqdb",
+  "description": "Genomic sequence storage, indexing and alignment inside PostgreSQL: https://bioseqdb.com/",
+  "homepage": "https://bioseqdb.com/",
+  "language": "VHDL",
+  "topics": [
+    "alignment",
+    "bioinformatics",
+    "biology",
+    "database",
+    "dna",
+    "genomic",
+    "genomics",
+    "metagenomics",
+    "minimap2",
+    "rna-seq",
+    "sequencing"
+  ],
+  "license": "Apache-2.0",
+  "stars": 208,
+  "forks": 1,
+  "open_issues": 0,
+  "created_at": "2026-09-27T11:04:05Z",
+  "pushed_at": "2026-10-22T17:39:51Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/7319352?v=4",
+  "last_seen": "2026-W43"
+}

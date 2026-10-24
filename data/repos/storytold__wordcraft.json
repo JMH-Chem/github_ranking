@@ -1,0 +1,19 @@
+{
+  "repo": "storytold/wordcraft",
+  "first_seen": "2026-W43",
+  "url": "https://github.com/storytold/wordcraft",
+  "description": "An open-source, clean-room reimplementation of Microsoft Word in pure Rust",
+  "homepage": "https://getartcraft.com/apps/wordcraft",
+  "language": "Rust",
+  "topics": [],
+  "license": "Apache-2.0",
+  "stars": 15868,
+  "forks": 4309,
+  "open_issues": 1744,
+  "created_at": "2026-10-07T08:34:24Z",
+  "pushed_at": "2026-10-24T15:13:19Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/76897702?v=4",
+  "last_seen": "2026-W43"
+}

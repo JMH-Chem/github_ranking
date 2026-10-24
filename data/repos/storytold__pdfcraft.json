@@ -1,0 +1,28 @@
+{
+  "repo": "storytold/pdfcraft",
+  "first_seen": "2026-W43",
+  "url": "https://github.com/storytold/pdfcraft",
+  "description": "PdfCraft: An open-source PDF reader and editor written by scratch in pure Rust",
+  "homepage": "https://getartcraft.com/apps/printcraft",
+  "language": "Rust",
+  "topics": [
+    "document-processing",
+    "documents",
+    "pdf",
+    "pdf-generation",
+    "pdf-processing",
+    "pdf-tools",
+    "pdf-viewer",
+    "rust"
+  ],
+  "license": "Apache-2.0",
+  "stars": 17601,
+  "forks": 6730,
+  "open_issues": 1910,
+  "created_at": "2026-09-30T13:39:37Z",
+  "pushed_at": "2026-10-24T14:57:58Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/76897702?v=4",
+  "last_seen": "2026-W43"
+}

@@ -1,0 +1,19 @@
+{
+  "repo": "openai/math",
+  "first_seen": "2026-W43",
+  "url": "https://github.com/openai/math",
+  "description": null,
+  "homepage": null,
+  "language": "Lean",
+  "topics": [],
+  "license": "Apache-2.0",
+  "stars": 15473,
+  "forks": 1811,
+  "open_issues": 0,
+  "created_at": "2026-10-06T21:47:02Z",
+  "pushed_at": "2026-10-12T21:55:27Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/14957082?v=4",
+  "last_seen": "2026-W43"
+}

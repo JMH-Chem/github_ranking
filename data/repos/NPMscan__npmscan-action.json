@@ -1,0 +1,28 @@
+{
+  "repo": "NPMscan/npmscan-action",
+  "first_seen": "2026-W43",
+  "url": "https://github.com/NPMscan/npmscan-action",
+  "description": "Catch risky npm dependency changes before they merge.",
+  "homepage": "https://npmscan.com/",
+  "language": "TypeScript",
+  "topics": [
+    "dependency-analysis",
+    "devsecops",
+    "github-actions",
+    "malware",
+    "npm",
+    "npm-security",
+    "security",
+    "supply-chain"
+  ],
+  "license": "MIT",
+  "stars": 170,
+  "forks": 0,
+  "open_issues": 2,
+  "created_at": "2026-10-02T11:15:15Z",
+  "pushed_at": "2026-10-23T20:40:39Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/336907155?v=4",
+  "last_seen": "2026-W43"
+}

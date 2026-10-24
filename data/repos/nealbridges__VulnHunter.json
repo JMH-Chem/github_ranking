@@ -1,0 +1,28 @@
+{
+  "repo": "nealbridges/VulnHunter",
+  "first_seen": "2026-W43",
+  "url": "https://github.com/nealbridges/VulnHunter",
+  "description": "Agentic AI security scanner that hunts exploitable vulnerabilities like an adversary, proves them with executable PoCs, and fixes them test-first. A maintained fork of Capital One's VulnHunter, rebuilt for any agent harness.",
+  "homepage": null,
+  "language": "Python",
+  "topics": [
+    "agent-harness",
+    "agentic-ai",
+    "appsec",
+    "exploit-verification",
+    "poc",
+    "sast",
+    "security",
+    "vulnerability-scanner"
+  ],
+  "license": "Apache-2.0",
+  "stars": 778,
+  "forks": 120,
+  "open_issues": 2,
+  "created_at": "2026-09-22T23:22:00Z",
+  "pushed_at": "2026-10-23T15:24:30Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/101598311?v=4",
+  "last_seen": "2026-W43"
+}

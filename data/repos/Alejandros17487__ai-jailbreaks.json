@@ -1,0 +1,27 @@
+{
+  "repo": "Alejandros17487/ai-jailbreaks",
+  "first_seen": "2026-W43",
+  "url": "https://github.com/Alejandros17487/ai-jailbreaks",
+  "description": "AI jailbreaks: 35 paste-ready AI jailbreak prompts for 25+ frontier and open-weight models - system prompts, AGENTS.md specs, and Ollama Modelfiles. Built for AI security research and red-team testing.",
+  "homepage": null,
+  "language": null,
+  "topics": [
+    "ai",
+    "ai-safety",
+    "jailbreak",
+    "jailbreaking",
+    "privacy",
+    "safety",
+    "security"
+  ],
+  "license": null,
+  "stars": 521,
+  "forks": 96,
+  "open_issues": 0,
+  "created_at": "2026-10-21T14:44:06Z",
+  "pushed_at": "2026-10-21T14:49:16Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/333087588?v=4",
+  "last_seen": "2026-W43"
+}

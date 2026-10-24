@@ -1,0 +1,19 @@
+{
+  "repo": "karatektus/pl_mail",
+  "first_seen": "2026-W43",
+  "url": "https://github.com/karatektus/pl_mail",
+  "description": "Self-hosted, Gmail-style mail client. Multi-account IMAP, threaded conversations, real-time push via IMAP IDLE + Mercure. Built with Symfony, FrankenPHP, Hotwire Turbo. Clone and docker compose up.",
+  "homepage": null,
+  "language": "PHP",
+  "topics": [],
+  "license": "AGPL-3.0",
+  "stars": 423,
+  "forks": 38,
+  "open_issues": 54,
+  "created_at": "2026-07-02T11:13:44Z",
+  "pushed_at": "2026-10-24T16:00:44Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/5417754?v=4",
+  "last_seen": "2026-W43"
+}

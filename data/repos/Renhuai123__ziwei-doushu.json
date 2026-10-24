@@ -1,0 +1,30 @@
+{
+  "repo": "Renhuai123/ziwei-doushu",
+  "first_seen": "2026-W43",
+  "url": "https://github.com/Renhuai123/ziwei-doushu",
+  "description": "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
+  "homepage": "https://metisziwei.com/?from=gh-about",
+  "language": "TypeScript",
+  "topics": [
+    "bazi",
+    "chinese-astrology",
+    "divination",
+    "fortune-telling",
+    "nextjs",
+    "open-source",
+    "purple-star-astrology",
+    "typescript",
+    "zi-wei-dou-shu",
+    "ziwei-doushu"
+  ],
+  "license": "MIT",
+  "stars": 7229,
+  "forks": 1473,
+  "open_issues": 8,
+  "created_at": "2026-05-01T05:09:59Z",
+  "pushed_at": "2026-10-24T02:34:09Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/91890238?v=4",
+  "last_seen": "2026-W43"
+}

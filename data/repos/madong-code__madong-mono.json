@@ -1,0 +1,32 @@
+{
+  "repo": "madong-code/madong-mono",
+  "first_seen": "2026-W43",
+  "url": "https://github.com/madong-code/madong-mono",
+  "description": "Monorepo frontend skeleton for madong-admin-saas multi-tenant SaaS platform, built with Vue3 + Vben, includes tenant management, platform admin UI, RBAC and CRUD pages.",
+  "homepage": "https://madong.tech",
+  "language": "JavaScript",
+  "topics": [
+    "admin",
+    "frontend",
+    "madong-admin-saas",
+    "monorepo",
+    "multi-tenant",
+    "open-source",
+    "saas",
+    "tenant-management",
+    "typescript",
+    "vben",
+    "vite",
+    "vue3"
+  ],
+  "license": "MIT",
+  "stars": 103,
+  "forks": 7,
+  "open_issues": 0,
+  "created_at": "2026-09-30T08:10:23Z",
+  "pushed_at": "2026-10-15T02:57:03Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/97489662?v=4",
+  "last_seen": "2026-W43"
+}
