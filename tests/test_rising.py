@@ -47,7 +47,23 @@ def test_exclusions():
     assert rising.exclusion_reason(cand("a/b", description="A curated list of tools"), blocked) == "list"
     assert rising.exclusion_reason(cand("a/b", stars=10), blocked) == "few-stars"
     assert rising.exclusion_reason(cand("a/b", forks=0, stars=5000), blocked) == "suspicious"
+    assert rising.exclusion_reason(cand("a/b", stars_week=60), blocked) == "slow"
+    assert rising.exclusion_reason(cand("a/b", stars=90000, stars_week=4000, age_days=2000),
+                                   blocked) == "established"
+    assert rising.exclusion_reason(cand("a/b", stars=9000, stars_week=900, age_days=2000),
+                                   blocked) is None
+    assert rising.exclusion_reason(cand("a/ai-jailbreaks"), blocked) == "keyword"
+    assert rising.exclusion_reason(cand("a/b", topics=["keygen"]), blocked) == "keyword"
+    assert rising.exclusion_reason(cand("a/b"), blocked, {"a/b"}) == "blocklist"
+    assert rising.exclusion_reason(cand("a/b"), blocked, {"a/*"}) == "blocklist"
     assert rising.exclusion_reason(cand("a/b"), blocked) is None
+
+
+def test_load_blocklist(tmp_path, monkeypatch):
+    path = tmp_path / "blocklist.txt"
+    path.write_text("# comment\nSpam/Repo  # why\n\nfarm/*\n", encoding="utf-8")
+    monkeypatch.setattr(config, "BLOCKLIST_FILE", path)
+    assert rising.load_blocklist() == {"spam/repo", "farm/*"}
 
 
 def test_blocked_includes_recent_ranks_and_recommendations(data_dir):
@@ -58,12 +74,12 @@ def test_blocked_includes_recent_ranks_and_recommendations(data_dir):
     assert rising.blocked_repos("2026-W43") == {"old/ranked", "now/ranked", "was/rising"}
 
 
-def test_shortlist_caps_per_category(monkeypatch):
+def test_shortlist_caps_per_category_and_owner(data_dir, monkeypatch):
     monkeypatch.setattr(config, "SHORTLIST_PER_CATEGORY", 2)
-    cands = [cand(f"a/{i}", guess_category="web") for i in range(5)]
-    cands.append(cand("b/1", guess_category="data"))
-    picked = rising.shortlist(cands)
-    assert [c["repo"] for c in picked] == ["a/0", "a/1", "b/1"]
+    cands = [cand(f"o{i}/r", guess_category="web") for i in range(5)]
+    cands += [cand("o0/second", guess_category="data"), cand("b/1", guess_category="data")]
+    picked = rising.shortlist(cands, "2026-W43")
+    assert [c["repo"] for c in picked] == ["o0/r", "o1/r", "b/1"]
 
 
 def test_finalize_uses_claude_category_and_prefers_summarized(data_dir, monkeypatch):
@@ -83,6 +99,19 @@ def test_finalize_uses_claude_category_and_prefers_summarized(data_dir, monkeypa
     assert picks["data"] == ["moved/to-data"]
     assert store.load_repo("next/summarized")["ko"] == {"category": "web"}
     assert store.rising_path("2026-W43").exists()
+
+
+def test_finalize_one_repo_per_owner(data_dir):
+    cands = [
+        {**cand("same/a", guess_category="web"), "score": 9.0},
+        {**cand("same/b", guess_category="data"), "score": 8.0},
+        {**cand("other/c", guess_category="data"), "score": 7.0},
+    ]
+    store.write_json(store.snapshot_path("2026-W43"), {"week": "2026-W43", "candidates": cands})
+    doc = rising.finalize("2026-W43")
+    picks = {c["key"]: [r["repo"] for r in c["repos"]] for c in doc["categories"]}
+    assert picks["web"] == ["same/a"]
+    assert picks["data"] == ["other/c"]
 
 
 def test_reason_text():

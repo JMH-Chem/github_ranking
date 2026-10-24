@@ -24,6 +24,8 @@ from .github_api import GitHub, age_days, repo_meta
 from .trending import fetch_trending, parse_trending
 
 AWESOME_RE = re.compile(r"(^|[-_])awesome([-_]|$)|curated list|awesome list", re.I)
+KEYWORD_RE = re.compile(
+    r"(?<![a-z0-9])(" + "|".join(map(re.escape, config.BLOCKED_KEYWORDS)) + r")(?![a-z0-9])")
 
 META_KEYS = ("repo", "url", "description", "homepage", "language", "topics", "license",
              "stars", "forks", "open_issues", "created_at", "pushed_at", "archived",
@@ -72,9 +74,26 @@ def score(c: dict) -> float:
     return round(math.log10(1 + stars_week) * (1 + 1.5 * ratio) * age_factor * estimated, 4)
 
 
-def exclusion_reason(c: dict, blocked: set[str]) -> str | None:
+def load_blocklist() -> set[str]:
+    path = config.BLOCKLIST_FILE
+    if not path.exists():
+        return set()
+    lines = (line.split("#")[0].strip().lower() for line in path.read_text(encoding="utf-8").splitlines())
+    return {line for line in lines if line}
+
+
+def owner_of(c: dict) -> str:
+    return c["repo"].split("/")[0].lower()
+
+
+def exclusion_reason(c: dict, blocked: set[str], blocklist: set[str] = frozenset()) -> str | None:
     if c["repo"] in blocked:
         return "recent"
+    if c["repo"].lower() in blocklist or f"{owner_of(c)}/*" in blocklist:
+        return "blocklist"
+    text = " ".join([c["repo"], c.get("description") or "", " ".join(c.get("topics") or [])])
+    if KEYWORD_RE.search(text.lower()):
+        return "keyword"
     if c.get("archived"):
         return "archived"
     if c.get("is_fork"):
@@ -85,7 +104,18 @@ def exclusion_reason(c: dict, blocked: set[str]) -> str | None:
         return "list"
     if (c.get("forks") or 0) == 0 and (c.get("stars") or 0) >= 300:
         return "suspicious"
+    if (c.get("stars_week") or 0) < config.MIN_STARS_WEEK:
+        return "slow"
+    ratio = (c.get("stars_week") or 0) / max(c.get("stars") or 1, 1)
+    if (c.get("age_days") or 0) > config.ESTABLISHED_DAYS and ratio < config.ESTABLISHED_MIN_RATIO:
+        return "established"
     return None
+
+
+def eligible(candidates: list[dict], week: str) -> list[dict]:
+    """Re-check exclusions at selection time so blocklist edits apply without re-collecting."""
+    blocked, blocklist = blocked_repos(week), load_blocklist()
+    return [c for c in candidates if exclusion_reason(c, blocked, blocklist) is None]
 
 
 def blocked_repos(week: str) -> set[str]:
@@ -143,8 +173,8 @@ def gather_candidates(session: requests.Session, gh: GitHub, week: str,
     cat_since = (now - timedelta(days=config.CATEGORY_SEARCH_DAYS)).date().isoformat()
     queries = [("search:new", f"created:>={new_since} stars:>={config.MIN_CANDIDATE_STARS}")]
     queries += [(f"search:{c['key']}",
-                 f"{c['search']} created:>={cat_since} stars:>={config.MIN_CANDIDATE_STARS}")
-                for c in config.CATEGORIES]
+                 f"{topic} created:>={cat_since} stars:>={config.MIN_CANDIDATE_STARS}")
+                for c in config.CATEGORIES for topic in c["search"]]
     for source, query in queries:
         try:
             items = gh.search_repos(query, per_page=30)
@@ -161,10 +191,10 @@ def gather_candidates(session: requests.Session, gh: GitHub, week: str,
                                         "stars_week": estimate_weekly(meta["stars"] or 0, age),
                                         "stars_week_estimated": True, "sources": [source]}
 
-    kept, excluded = [], Counter()
+    kept, excluded, blocklist = [], Counter(), load_blocklist()
     for c in candidates.values():
         c["age_days"] = age_days(c["created_at"], now)
-        reason = exclusion_reason(c, blocked)
+        reason = exclusion_reason(c, blocked, blocklist)
         if reason:
             excluded[reason] += 1
             continue
@@ -183,13 +213,15 @@ def gather_candidates(session: requests.Session, gh: GitHub, week: str,
 
 # --- selection -------------------------------------------------------------
 
-def shortlist(candidates: list[dict]) -> list[dict]:
-    """Top candidates per guessed category; these get Korean summaries."""
-    picked, per_cat = [], Counter()
-    for c in candidates:  # already sorted by score
-        if per_cat[c["guess_category"]] < config.SHORTLIST_PER_CATEGORY:
-            picked.append(c)
-            per_cat[c["guess_category"]] += 1
+def shortlist(candidates: list[dict], week: str) -> list[dict]:
+    """Top candidates per guessed category, one per owner; these get Korean summaries."""
+    picked, per_cat, owners = [], Counter(), set()
+    for c in eligible(candidates, week):  # already sorted by score
+        if owner_of(c) in owners or per_cat[c["guess_category"]] >= config.SHORTLIST_PER_CATEGORY:
+            continue
+        picked.append(c)
+        per_cat[c["guess_category"]] += 1
+        owners.add(owner_of(c))
     return picked
 
 
@@ -222,18 +254,25 @@ def finalize(week: str) -> dict:
     if snap is None:
         raise SystemExit(f"no snapshot for {week}")
 
-    by_cat: dict[str, list[tuple]] = {k: [] for k in config.CATEGORY_KEYS}
-    for c in snap["candidates"]:
-        doc = store.load_repo(c["repo"])
-        ko = (doc or {}).get("ko")
-        cat = ko["category"] if ko else c["guess_category"]
-        by_cat[cat].append((bool(ko), c))
+    # Summarized repos first (they show a Korean description), then by score.
+    rows = []
+    for c in eligible(snap["candidates"], week):
+        ko = (store.load_repo(c["repo"]) or {}).get("ko")
+        rows.append((bool(ko), c["score"], ko["category"] if ko else c["guess_category"], c))
+    rows.sort(key=lambda t: (t[0], t[1]), reverse=True)
+
+    by_cat: dict[str, list[dict]] = {k: [] for k in config.CATEGORY_KEYS}
+    owners = set()
+    for _, _, cat, c in rows:
+        if owner_of(c) in owners or len(by_cat[cat]) >= config.RISING_PER_CATEGORY:
+            continue
+        by_cat[cat].append(c)
+        owners.add(owner_of(c))
 
     categories = []
     for cat in config.CATEGORIES:
-        rows = sorted(by_cat[cat["key"]], key=lambda t: (t[0], t[1]["score"]), reverse=True)
         picks = []
-        for _, c in rows[:config.RISING_PER_CATEGORY]:
+        for c in by_cat[cat["key"]]:
             store.upsert_repo(meta_of(c), week)
             picks.append({
                 "repo": c["repo"],

@@ -33,6 +33,13 @@ SHORTLIST_PER_CATEGORY = 8   # candidates per category sent for summaries
 RECOMMEND_COOLDOWN_WEEKS = 4 # don't recommend the same repo again within N weeks
 CANDIDATE_ENRICH_LIMIT = 120 # trending-tab candidates looked up via the API
 MIN_CANDIDATE_STARS = 50
+MIN_STARS_WEEK = 100        # weekly gain (real or estimated) needed to be recommended
+ESTABLISHED_DAYS = 365      # repos older than this need real momentum to count as rising:
+ESTABLISHED_MIN_RATIO = 0.05  # weekly gain / total stars
+# Never recommend repos whose name, description or topics contain these words.
+BLOCKED_KEYWORDS = ["jailbreak", "jailbreaks", "keygen", "cracked", "piracy", "warez"]
+# Hand-maintained list of repos to leave out (owner/name or owner/*).
+BLOCKLIST_FILE = ROOT / "pipeline" / "blocklist.txt"
 NEW_REPO_DAYS = 30           # "new repo" search window
 CATEGORY_SEARCH_DAYS = 90    # per-category search window
 

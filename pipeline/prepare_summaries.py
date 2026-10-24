@@ -82,7 +82,7 @@ def targets(week: str) -> list[str]:
     names = [e["repo"] for e in week_doc["entries"]]
 
     snap = store.read_json(store.snapshot_path(week), {"candidates": []})
-    for c in rising.shortlist(snap["candidates"]):
+    for c in rising.shortlist(snap["candidates"], week):
         store.upsert_repo(rising.meta_of(c), week)
         if c["repo"] not in names:
             names.append(c["repo"])

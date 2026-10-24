@@ -3,7 +3,10 @@
     "key": "ai-llm",
     "name": "AI·LLM·에이전트",
     "hint": "LLM, AI 에이전트, 생성형 AI, 모델 추론·서빙, RAG, MCP, 이미지·음성 생성",
-    "search": "topic:llm",
+    "search": [
+      "topic:llm",
+      "topic:ai-agents"
+    ],
     "keywords": [
       "llm",
       "llms",
@@ -42,7 +45,10 @@
     "key": "devtools",
     "name": "개발 도구·CLI·생산성",
     "hint": "CLI, 터미널, 에디터·IDE 플러그인, 빌드·테스트·린트 도구, 개발 생산성",
-    "search": "topic:cli",
+    "search": [
+      "topic:cli",
+      "topic:developer-tools"
+    ],
     "keywords": [
       "cli",
       "terminal",
@@ -74,7 +80,10 @@
     "key": "web",
     "name": "웹·프론트엔드",
     "hint": "웹 프레임워크, UI 컴포넌트, CSS, 브라우저, 웹 앱",
-    "search": "topic:frontend",
+    "search": [
+      "topic:frontend",
+      "topic:react"
+    ],
     "keywords": [
       "react",
       "vue",
@@ -103,7 +112,11 @@
     "key": "infra",
     "name": "백엔드·인프라·DevOps",
     "hint": "서버·백엔드 프레임워크, 클라우드, 쿠버네티스·도커, 배포, 모니터링, 셀프호스팅",
-    "search": "topic:devops",
+    "search": [
+      "topic:devops",
+      "topic:self-hosted",
+      "topic:kubernetes"
+    ],
     "keywords": [
       "kubernetes",
       "k8s",
@@ -134,7 +147,10 @@
     "key": "data",
     "name": "데이터·DB·ML 엔지니어링",
     "hint": "데이터베이스, 데이터 처리·분석, ETL, 시각화, 머신러닝 학습·MLOps",
-    "search": "topic:database",
+    "search": [
+      "topic:database",
+      "topic:data-engineering"
+    ],
     "keywords": [
       "database",
       "sql",
@@ -163,7 +179,10 @@
     "key": "security",
     "name": "보안",
     "hint": "보안 점검, 취약점 분석, 침투 테스트, 리버스 엔지니어링, 프라이버시, 인증",
-    "search": "topic:security",
+    "search": [
+      "topic:security",
+      "topic:cybersecurity"
+    ],
     "keywords": [
       "security",
       "pentest",
@@ -188,7 +207,11 @@
     "key": "etc",
     "name": "모바일·게임·그래픽스·기타",
     "hint": "모바일·데스크톱 앱, 게임, 그래픽스, 하드웨어·임베디드, 그 밖의 분야",
-    "search": "topic:game",
+    "search": [
+      "topic:game",
+      "topic:android",
+      "topic:macos"
+    ],
     "keywords": [
       "android",
       "ios",
