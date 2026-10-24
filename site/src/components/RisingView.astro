@@ -1,0 +1,50 @@
+---
+import RepoCard from "./RepoCard.astro";
+import type { Rising } from "../lib/data";
+import { allRising, categories, getRepo } from "../lib/data";
+import { href, weekTitle } from "../lib/format";
+
+interface Props {
+  rising: Rising;
+}
+const { rising } = Astro.props;
+const list = allRising();
+const i = list.findIndex((r) => r.week === rising.week);
+const prev = list[i - 1];
+const next = list[i + 1];
+const hints = new Map(categories.map((c) => [c.key, c.hint]));
+const filled = rising.categories.filter((c) => c.repos.length > 0);
+---
+
+<section class="hero">
+  <p class="eyebrow">랭킹 밖에서 떠오르는 레포</p>
+  <h1>분야별 추천 <span class="hero-range">{weekTitle(rising.week)}</span></h1>
+  <p class="hero-sub">
+    주간 랭킹에는 없지만 최근 스타가 빠르게 늘고 있는 레포를 분야마다 최대 5개씩 골랐습니다.
+    최근 4주 안에 랭킹에 올랐거나 이미 추천한 레포는 뺍니다.
+  </p>
+  <nav class="chips" aria-label="분야 바로가기">
+    {filled.map((c) => <a class="chip" href={`#${c.key}`}>{c.name}</a>)}
+  </nav>
+  {(prev || next) && (<nav class="week-nav">
+    {prev ? <a href={href(`rising/${prev.week}/`)}>← {weekTitle(prev.week)}</a> : <span></span>}
+    {next && <a href={href(`rising/${next.week}/`)}>{weekTitle(next.week)} →</a>}
+  </nav>)}
+</section>
+
+{filled.map((c) => (
+  <section class="category" id={c.key}>
+    <h2>{c.name}</h2>
+    <p class="muted">{hints.get(c.key)}</p>
+    <div class="card-list">
+      {c.repos.map((p) => (
+        <RepoCard repo={getRepo(p.repo)} reason={p.reason} />
+      ))}
+    </div>
+  </section>
+))}
+
+<p class="footnote">
+  점수는 이번 주 늘어난 스타 수, 전체 스타 대비 증가 비율, 공개된 지 얼마나 됐는지를 함께 봅니다. 언어별 트렌딩 탭에 없는
+  신규 레포는 생성 이후 평균 증가 속도로 최근 7일 스타를 추정합니다.
+</p>

@@ -1,0 +1,196 @@
+name: weekly-update
+
+# 1. collect   : scrape the weekly trending page, fetch repo info, score
+#                rising candidates, commit data/, stage summary inputs
+# 2. summarize : Claude Code (subscription token) writes Korean summaries,
+#                one job per chunk, with read-only repo access
+# 3. publish   : validate and merge summaries, pick rising repos, commit
+# 4. deploy    : rebuild and publish the site
+on:
+  schedule:
+    - cron: "7 0 * * 1" # Mondays 09:07 KST
+  workflow_dispatch:
+    inputs:
+      week:
+        description: "주차 라벨 강제 지정 (예: 2026-W43). 비우면 자동 계산"
+        required: false
+        default: ""
+
+concurrency:
+  group: weekly-update
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    outputs:
+      week: ${{ steps.collect.outputs.week }}
+      chunks: ${{ steps.prepare.outputs.chunks }}
+      has_pending: ${{ steps.prepare.outputs.has_pending }}
+      has_token: ${{ steps.token.outputs.has_token }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+
+      - name: Check for the Claude subscription token
+        id: token
+        env:
+          TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          if [ -n "$TOKEN" ]; then
+            echo "has_token=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_token=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::CLAUDE_CODE_OAUTH_TOKEN 시크릿이 없어 한국어 요약을 건너뜁니다."
+          fi
+
+      - name: Collect weekly ranking and rising candidates
+        id: collect
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          WEEK: ${{ inputs.week }}
+        run: python -m pipeline.collect ${WEEK:+--week "$WEEK"}
+
+      - name: Stage repos that need Korean summaries
+        id: prepare
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python -m pipeline.prepare_summaries --week "${{ steps.collect.outputs.week }}"
+
+      - name: Commit ranking data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet || git commit -m "data: ${{ steps.collect.outputs.week }} 주간 랭킹 수집"
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin "HEAD:$GITHUB_REF_NAME"
+
+      - if: steps.prepare.outputs.has_pending == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: pending
+          path: work/
+          retention-days: 7
+
+  summarize:
+    needs: collect
+    if: needs.collect.outputs.has_pending == 'true' && needs.collect.outputs.has_token == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        chunk: ${{ fromJSON(needs.collect.outputs.chunks) }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/download-artifact@v4
+        with:
+          name: pending
+          path: work
+      - uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          github_token: ${{ github.token }}
+          prompt: "/summarize-repos work/pending/${{ matrix.chunk }}"
+          claude_args: >-
+            --max-turns 60
+            --allowedTools "Read,Write,Glob"
+            --disallowedTools "Bash,Edit,WebFetch,WebSearch,Task"
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: summaries-${{ matrix.chunk }}
+          path: work/out/
+          if-no-files-found: warn
+          retention-days: 7
+
+  publish:
+    needs: [collect, summarize]
+    if: always() && needs.collect.result == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+
+      - if: needs.collect.outputs.has_pending == 'true'
+        uses: actions/download-artifact@v4
+        with:
+          name: pending
+          path: work
+      - if: needs.summarize.result != 'skipped'
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          pattern: summaries-*
+          path: work/out
+          merge-multiple: true
+
+      - name: Merge Korean summaries
+        run: python -m pipeline.merge_summaries
+      - name: Pick rising repos
+        run: python -m pipeline.rising --week "${{ needs.collect.outputs.week }}"
+
+      - name: Commit summaries and rising picks
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet || git commit -m "data: ${{ needs.collect.outputs.week }} 한국어 요약과 떠오르는 레포 반영"
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin "HEAD:$GITHUB_REF_NAME"
+
+  deploy:
+    needs: publish
+    if: always() && needs.publish.result == 'success'
+    uses: ./.github/workflows/deploy.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+  report-failure:
+    needs: [collect, summarize, publish, deploy]
+    if: failure()
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Open or update a failure issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          gh label create weekly-failure --repo "$GITHUB_REPOSITORY" --color d73a4a \
+            --description "주간 업데이트 실패" --force
+          existing=$(gh issue list --repo "$GITHUB_REPOSITORY" --label weekly-failure --state open \
+            --json number --jq '.[0].number')
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --repo "$GITHUB_REPOSITORY" --body "다시 실패했습니다: $RUN_URL"
+          else
+            gh issue create --repo "$GITHUB_REPOSITORY" --label weekly-failure \
+              --title "주간 업데이트 실패" \
+              --body "주간 업데이트 워크플로가 실패했습니다. 실행 로그: $RUN_URL"
+          fi

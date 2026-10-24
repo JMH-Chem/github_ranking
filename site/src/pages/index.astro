@@ -1,0 +1,41 @@
+---
+import Base from "../layouts/Base.astro";
+import WeekView from "../components/WeekView.astro";
+import { categoryName, getRepo, latestRising, latestWeek, slug } from "../lib/data";
+import { href } from "../lib/format";
+
+const week = latestWeek();
+const rising = latestRising();
+const preview = (rising?.categories ?? []).filter((c) => c.repos.length > 0).map((c) => ({ name: c.name, key: c.key, pick: c.repos[0] }));
+---
+
+<Base active="week">
+  {week ? (
+    <>
+      <WeekView week={week} heading="이번 주 GitHub 트렌딩" />
+      {preview.length > 0 && (
+        <section class="category">
+          <h2>랭킹 밖에서 떠오르는 레포</h2>
+          <p class="muted">분야별 1위만 모았습니다. <a href={href("rising/")}>분야별 추천 전체 보기 →</a></p>
+          <ul class="preview">
+            {preview.map(({ name, key, pick }) => {
+              const repo = getRepo(pick.repo);
+              return (
+                <li>
+                  <a class="chip" href={href(`rising/#${key}`)}>{name}</a>
+                  <a class="repo-name" href={href(`repos/${slug(pick.repo)}/`)}>{pick.repo}</a>
+                  <span class="muted">{repo.ko?.one_liner ?? repo.description ?? ""}</span>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      )}
+    </>
+  ) : (
+    <section class="hero">
+      <h1>아직 수집된 랭킹이 없습니다</h1>
+      <p class="hero-sub">매주 월요일 오전 9시에 GitHub 주간 트렌딩을 수집합니다. 첫 수집이 끝나면 여기에 표시됩니다.</p>
+    </section>
+  )}
+</Base>

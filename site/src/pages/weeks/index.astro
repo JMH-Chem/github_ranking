@@ -1,0 +1,29 @@
+---
+import Base from "../../layouts/Base.astro";
+import { allWeeks } from "../../lib/data";
+import { href, range, weekTitle } from "../../lib/format";
+
+const weeks = [...allWeeks()].reverse();
+---
+
+<Base title="지난 랭킹" active="archive">
+  <section class="hero">
+    <h1>지난 랭킹</h1>
+    <p class="hero-sub">주차별 GitHub 주간 트렌딩 기록입니다. 기록은 이 사이트가 수집을 시작한 주부터 쌓입니다.</p>
+  </section>
+  {weeks.length === 0 && <p class="muted">아직 기록이 없습니다.</p>}
+  <ul class="archive">
+    {weeks.map((w) => (
+      <li>
+        <a href={href(`weeks/${w.week}/`)}>
+          <strong>{weekTitle(w.week)}</strong>
+          <span class="muted">{range(w.start, w.end)}</span>
+        </a>
+        <span class="archive-top">
+          {w.entries.slice(0, 3).map((e) => <span>{e.rank}. {e.repo}</span>)}
+          {w.entries.length > 3 && <span class="muted">외 {w.entries.length - 3}개</span>}
+        </span>
+      </li>
+    ))}
+  </ul>
+</Base>

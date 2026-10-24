@@ -1,0 +1,33 @@
+---
+import RepoCard from "./RepoCard.astro";
+import type { Week } from "../lib/data";
+import { allWeeks, getRepo } from "../lib/data";
+import { href, range, weekTitle } from "../lib/format";
+
+interface Props {
+  week: Week;
+  heading?: string;
+}
+const { week, heading } = Astro.props;
+const weeks = allWeeks();
+const i = weeks.findIndex((w) => w.week === week.week);
+const prev = weeks[i - 1];
+const next = weeks[i + 1];
+const newCount = week.entries.filter((e) => e.is_new).length;
+---
+
+<section class="hero">
+  <p class="eyebrow">{heading ?? "GitHub 주간 트렌딩"}</p>
+  <h1>{weekTitle(week.week)} <span class="hero-range">{range(week.start, week.end)}</span></h1>
+  <p class="hero-sub">
+    이번 주 GitHub에서 가장 주목받은 레포 {week.entries.length}개{newCount > 0 && <>, 그중 처음 진입한 레포 {newCount}개</>}.
+  </p>
+  {(prev || next) && (<nav class="week-nav">
+    {prev ? <a href={href(`weeks/${prev.week}/`)}>← {weekTitle(prev.week)}</a> : <span></span>}
+    {next && <a href={href(`weeks/${next.week}/`)}>{weekTitle(next.week)} →</a>}
+  </nav>)}
+</section>
+
+<div class="card-list">
+  {week.entries.map((e) => <RepoCard repo={getRepo(e.repo)} entry={e} />)}
+</div>

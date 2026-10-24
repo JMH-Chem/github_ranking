@@ -1,0 +1,16 @@
+---
+import Base from "../../layouts/Base.astro";
+import WeekView from "../../components/WeekView.astro";
+import type { Week } from "../../lib/data";
+import { allWeeks } from "../../lib/data";
+import { weekTitle } from "../../lib/format";
+
+export function getStaticPaths() {
+  return allWeeks().map((week) => ({ params: { week: week.week }, props: { week } }));
+}
+const { week } = Astro.props as { week: Week };
+---
+
+<Base title={`${weekTitle(week.week)} 랭킹`} active="archive">
+  <WeekView week={week} />
+</Base>

@@ -1,0 +1,67 @@
+---
+import type { Repo, WeekEntry } from "../lib/data";
+import { categoryName, slug } from "../lib/data";
+import { href, langColor, n, short } from "../lib/format";
+
+interface Props {
+  repo: Repo;
+  entry?: WeekEntry; // ranking row; omitted on the rising page
+  reason?: string;   // why it is on the rising page, includes the star gain
+}
+const { repo, entry, reason } = Astro.props;
+const [owner, name] = repo.repo.split("/");
+const ko = repo.ko;
+const language = entry?.language ?? repo.language;
+const stars = entry?.stars_total ?? repo.stars;
+
+let move: { cls: string; text: string; label: string } | null = null;
+if (entry) {
+  if (entry.is_new) move = { cls: "new", text: "NEW", label: "처음 진입" };
+  else if (entry.prev_rank == null && entry.weeks_on_chart > 1) move = { cls: "back", text: "재진입", label: "다시 진입" };
+  else if (entry.prev_rank != null && entry.prev_rank > entry.rank)
+    move = { cls: "up", text: `▲${entry.prev_rank - entry.rank}`, label: `지난주 ${entry.prev_rank}위` };
+  else if (entry.prev_rank != null && entry.prev_rank < entry.rank)
+    move = { cls: "down", text: `▼${entry.rank - entry.prev_rank}`, label: `지난주 ${entry.prev_rank}위` };
+  else if (entry.prev_rank != null) move = { cls: "same", text: "–", label: "지난주와 같은 순위" };
+}
+---
+
+<article class="card">
+  {entry && <div class="rank" aria-label={`${entry.rank}위`}>{entry.rank}</div>}
+  <div class="card-body">
+    <header class="card-head">
+      <a class="repo-name" href={href(`repos/${slug(repo.repo)}/`)}>
+        <span class="owner">{owner} /</span> <strong>{name}</strong>
+      </a>
+      {move && <span class={`badge ${move.cls}`} title={move.label}>{move.text}</span>}
+      {entry && entry.streak >= 2 && <span class="badge streak">{entry.streak}주 연속</span>}
+    </header>
+
+    {ko ? (
+      <p class="one-liner">{ko.one_liner}</p>
+    ) : (
+      <p class="one-liner en">{repo.description ?? "설명이 없는 레포입니다."}</p>
+    )}
+
+    {reason && <p class="reason">{reason}</p>}
+
+    {ko && (
+      <details>
+        <summary>자세히 보기</summary>
+        <p>{ko.summary}</p>
+        <ul>{ko.features.map((f) => <li>{f}</li>)}</ul>
+        <p class="use-cases"><strong>이럴 때 좋아요</strong> {ko.use_cases}</p>
+      </details>
+    )}
+
+    <footer class="card-meta">
+      {language && (
+        <span><i class="lang-dot" style={`background:${langColor(language)}`}></i>{language}</span>
+      )}
+      <span title={`스타 ${n(stars)}개`}>★ {short(stars)}</span>
+      {entry?.stars_week != null && <span class="gain">이번 주 +{n(entry.stars_week)}</span>}
+      {ko && <span class="chip">{categoryName(ko.category)}</span>}
+      {!ko && <span class="muted">한국어 설명 준비 중</span>}
+    </footer>
+  </div>
+</article>

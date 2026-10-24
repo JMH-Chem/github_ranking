@@ -1,0 +1,136 @@
+---
+import Base from "../../layouts/Base.astro";
+import type { Repo } from "../../lib/data";
+import { allRepos, allWeeks, categoryName, rankHistory, risingHistory, slug } from "../../lib/data";
+import { day, href, langColor, n, weekTitle } from "../../lib/format";
+
+export function getStaticPaths() {
+  return allRepos().map((repo) => ({ params: { slug: slug(repo.repo) }, props: { repo } }));
+}
+const { repo } = Astro.props as { repo: Repo };
+const ko = repo.ko;
+const [owner, name] = repo.repo.split("/");
+const ranks = rankHistory(repo.repo);
+const risings = risingHistory(repo.repo);
+const best = ranks.length ? Math.min(...ranks.map((r) => r.rank)) : null;
+
+// Rank chart over every week from the first appearance to the latest week.
+const weeks = allWeeks();
+const firstIdx = ranks.length ? weeks.findIndex((w) => w.week === ranks[0].week) : -1;
+const span = firstIdx >= 0 ? weeks.slice(firstIdx) : [];
+const byWeek = new Map(ranks.map((r) => [r.week, r.rank]));
+const lo = ranks.length ? Math.min(...ranks.map((r) => r.rank)) : 1;
+const hi = Math.max(lo + 1, ...ranks.map((r) => r.rank));
+const W = 64, H = 110, PAD = 22;
+const chartW = Math.max(1, span.length - 1) * W + PAD * 2;
+const pts = span.map((w, i) => {
+  const rank = byWeek.get(w.week);
+  return { i, week: w.week, rank, x: PAD + i * W, y: rank ? PAD + ((rank - lo) / (hi - lo)) * (H - PAD * 2) : null };
+});
+const segments: string[] = [];
+let cur: string[] = [];
+for (const p of pts) {
+  if (p.y == null) { if (cur.length > 1) segments.push(cur.join(" ")); cur = []; continue; }
+  cur.push(`${p.x},${p.y}`);
+}
+if (cur.length > 1) segments.push(cur.join(" "));
+const description = ko?.one_liner ?? repo.description ?? `${repo.repo} 레포 정보`;
+---
+
+<Base title={repo.repo} description={description}>
+  <section class="hero repo-hero">
+    <p class="eyebrow">{owner}</p>
+    <h1>{name}</h1>
+    <p class="hero-sub">{description}</p>
+    <div class="repo-links">
+      <a class="button" href={repo.url ?? `https://github.com/${repo.repo}`}>GitHub에서 보기</a>
+      {repo.homepage && <a class="button ghost" href={repo.homepage}>홈페이지</a>}
+    </div>
+    <dl class="stats">
+      {repo.language && (
+        <div><dt>언어</dt><dd><i class="lang-dot" style={`background:${langColor(repo.language)}`}></i>{repo.language}</dd></div>
+      )}
+      <div><dt>스타</dt><dd>{n(repo.stars)}</dd></div>
+      <div><dt>포크</dt><dd>{n(repo.forks)}</dd></div>
+      {repo.license && <div><dt>라이선스</dt><dd>{repo.license}</dd></div>}
+      {repo.created_at && <div><dt>생성</dt><dd>{repo.created_at.slice(0, 4)}년 {day(repo.created_at)}</dd></div>}
+      {ko && <div><dt>분야</dt><dd>{categoryName(ko.category)}</dd></div>}
+    </dl>
+  </section>
+
+  {ko ? (
+    <section class="panel">
+      <h2>어떤 프로젝트인가요?</h2>
+      <p>{ko.summary}</p>
+      <h3>주요 기능</h3>
+      <ul>{ko.features.map((f) => <li>{f}</li>)}</ul>
+      <h3>이럴 때 좋아요</h3>
+      <p>{ko.use_cases}</p>
+      <p class="ai-note">
+        이 설명은 Claude가 README를 읽고 {day(ko.generated_at)}에 작성한 AI 요약입니다.
+        {ko.readme_truncated && " README가 길어서 앞부분만 참고했습니다."}
+        정확한 내용은 원문을 확인하세요.
+      </p>
+    </section>
+  ) : (
+    <section class="panel">
+      <p class="muted">한국어 설명을 준비 중입니다. 다음 주간 업데이트 때 추가됩니다.</p>
+    </section>
+  )}
+
+  {repo.description && (
+    <section class="panel">
+      <h2>원문 설명</h2>
+      <p lang="en">{repo.description}</p>
+      {repo.topics && repo.topics.length > 0 && (
+        <p class="topics">{repo.topics.map((t) => <span class="chip">{t}</span>)}</p>
+      )}
+    </section>
+  )}
+
+  {ranks.length > 0 && (
+    <section class="panel">
+      <h2>랭킹 기록</h2>
+      <p class="muted">
+        {ranks.length}주 동안 주간 트렌딩에 올랐고, 최고 순위는 {best}위입니다.
+      </p>
+      {ranks.length > 1 && (
+        <div class="chart-scroll">
+          <svg class="rank-chart" viewBox={`0 0 ${chartW} ${H}`} width={chartW} height={H} role="img"
+            aria-label={`주차별 순위: ${ranks.map((r) => `${weekTitle(r.week)} ${r.rank}위`).join(", ")}`}>
+            {segments.map((s) => <polyline points={s} />)}
+            {pts.map((p) => p.y != null && (
+              <g>
+                <circle cx={p.x} cy={p.y} r="4" />
+                <text x={p.x} y={p.y - 9} text-anchor="middle">{p.rank}</text>
+              </g>
+            ))}
+          </svg>
+        </div>
+      )}
+      <table class="history">
+        <thead><tr><th>주차</th><th>순위</th><th>그 주 스타</th></tr></thead>
+        <tbody>
+          {[...ranks].reverse().map((r) => (
+            <tr>
+              <td><a href={href(`weeks/${r.week}/`)}>{weekTitle(r.week)}</a></td>
+              <td>{r.rank}위</td>
+              <td>+{n(r.stars_week)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </section>
+  )}
+
+  {risings.length > 0 && (
+    <section class="panel">
+      <h2>떠오르는 레포 추천 기록</h2>
+      <ul>
+        {risings.map((r) => (
+          <li><a href={href(`rising/${r.week}/`)}>{weekTitle(r.week)}</a> · {r.category} · {r.reason}</li>
+        ))}
+      </ul>
+    </section>
+  )}
+</Base>

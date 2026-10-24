@@ -1,0 +1,16 @@
+---
+import Base from "../../layouts/Base.astro";
+import RisingView from "../../components/RisingView.astro";
+import type { Rising } from "../../lib/data";
+import { allRising } from "../../lib/data";
+import { weekTitle } from "../../lib/format";
+
+export function getStaticPaths() {
+  return allRising().map((rising) => ({ params: { week: rising.week }, props: { rising } }));
+}
+const { rising } = Astro.props as { rising: Rising };
+---
+
+<Base title={`${weekTitle(rising.week)} 떠오르는 레포`} active="rising">
+  <RisingView rising={rising} />
+</Base>

@@ -1,0 +1,18 @@
+---
+import Base from "../../layouts/Base.astro";
+import RisingView from "../../components/RisingView.astro";
+import { latestRising } from "../../lib/data";
+
+const rising = latestRising();
+---
+
+<Base title="떠오르는 레포" active="rising">
+  {rising ? (
+    <RisingView rising={rising} />
+  ) : (
+    <section class="hero">
+      <h1>떠오르는 레포</h1>
+      <p class="hero-sub">첫 주간 수집이 끝나면 분야별 추천이 여기에 표시됩니다.</p>
+    </section>
+  )}
+</Base>
