@@ -58,5 +58,6 @@ cd site && npm ci && npm run dev                 # 사이트 개발 서버 (data
 ## 바꾸기 쉬운 것들
 
 - 분야와 키워드: `pipeline/categories.json` (스킬 문서 `.claude/skills/summarize-repos/SKILL.md`의 분야 표도 같이 고치세요. 테스트가 둘이 맞는지 확인합니다.)
-- 분야당 추천 수, 한 번에 요약할 최대 개수, 후보로 볼 언어 탭: `pipeline/config.py`
+- 떠오르는 레포에서 빼고 싶은 레포: `pipeline/blocklist.txt`에 `owner/name`이나 `owner/*`를 한 줄씩 적습니다. 다음 실행부터 반영됩니다. (주간 랭킹은 GitHub 트렌딩을 그대로 기록하므로 영향이 없습니다.)
+- 분야당 추천 수, 최소 주간 스타 증가량, 한 번에 요약할 최대 개수, 후보로 볼 언어 탭: `pipeline/config.py`
 - 요약 문체와 형식: `.claude/skills/summarize-repos/SKILL.md`
