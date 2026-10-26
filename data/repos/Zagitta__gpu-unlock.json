@@ -1,0 +1,19 @@
+{
+  "repo": "Zagitta/gpu-unlock",
+  "first_seen": "2026-W43",
+  "url": "https://github.com/Zagitta/gpu-unlock",
+  "description": "Unlock FP/BF16 instruction issue rate on Nvidia 3000's cards to their professional equivalents",
+  "homepage": null,
+  "language": "C",
+  "topics": [],
+  "license": null,
+  "stars": 7317,
+  "forks": 763,
+  "open_issues": 132,
+  "created_at": "2026-10-18T01:28:31Z",
+  "pushed_at": "2026-10-24T15:47:28Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/865977?v=4",
+  "last_seen": "2026-W43"
+}

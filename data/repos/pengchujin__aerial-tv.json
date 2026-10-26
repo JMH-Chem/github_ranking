@@ -1,0 +1,19 @@
+{
+  "repo": "pengchujin/aerial-tv",
+  "first_seen": "2026-W43",
+  "url": "https://github.com/pengchujin/aerial-tv",
+  "description": "给国产电视的一块干净桌面：参照 tvOS 设计的开源 Android TV 桌面，没有广告，开机自动接管。A tvOS-style launcher for Xiaomi, TCL and other China-market TVs.",
+  "homepage": "https://aerial.qust.me",
+  "language": "Kotlin",
+  "topics": [],
+  "license": "MIT",
+  "stars": 5254,
+  "forks": 426,
+  "open_issues": 260,
+  "created_at": "2026-10-20T09:13:06Z",
+  "pushed_at": "2026-10-26T02:11:19Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/16513318?v=4",
+  "last_seen": "2026-W43"
+}

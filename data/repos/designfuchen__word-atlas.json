@@ -1,0 +1,32 @@
+{
+  "repo": "designfuchen/word-atlas",
+  "first_seen": "2026-W43",
+  "url": "https://github.com/designfuchen/word-atlas",
+  "description": "词光 · 一词一画，点亮雅思 — 7,298 IELTS words, each with an original illustration, UK/US audio, 14,596 example sentences and FSRS review. Free, open source, no login. Dataset CC BY 4.0.",
+  "homepage": "https://0xlei.tech/words/",
+  "language": "TypeScript",
+  "topics": [
+    "chinese",
+    "dataset",
+    "english-learning",
+    "flashcards",
+    "fsrs",
+    "ielts",
+    "language-learning",
+    "pwa",
+    "react",
+    "spaced-repetition",
+    "vocabulary",
+    "webgl"
+  ],
+  "license": null,
+  "stars": 841,
+  "forks": 220,
+  "open_issues": 3,
+  "created_at": "2026-10-25T08:27:22Z",
+  "pushed_at": "2026-10-26T03:11:05Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/17679892?v=4",
+  "last_seen": "2026-W43"
+}
