@@ -1,6 +1,6 @@
 {
   "week": "2026-W43",
-  "generated_at": "2026-10-24T18:07:36+00:00",
+  "generated_at": "2026-10-26T04:41:28+00:00",
   "categories": [
     {
       "key": "ai-llm",
@@ -8,48 +8,48 @@
       "repos": [
         {
           "repo": "deepseek-ai/DeepInfer",
-          "score": 12.6169,
-          "stars_week": 19015,
+          "score": 11.7245,
+          "stars_week": 17547,
           "stars_week_estimated": true,
-          "stars": 21731,
-          "age_days": 8,
-          "reason": "최근 7일 ★ 약 +19,015 (추정) · 공개 8일 차"
+          "stars": 22561,
+          "age_days": 9,
+          "reason": "최근 7일 ★ 약 +17,547 (추정) · 공개 9일 차"
+        },
+        {
+          "repo": "rddmwmddr/android-ad-cleaner",
+          "score": 9.6234,
+          "stars_week": 1044,
+          "stars_week_estimated": true,
+          "stars": 1044,
+          "age_days": 1,
+          "reason": "최근 7일 ★ 약 +1,044 (추정) · 공개 일주일 이내"
         },
         {
           "repo": "Leonxlnx/earshot",
-          "score": 9.1296,
-          "stars_week": 2018,
+          "score": 8.6098,
+          "stars_week": 1967,
           "stars_week_estimated": true,
-          "stars": 2595,
-          "age_days": 9,
-          "reason": "최근 7일 ★ 약 +2,018 (추정) · 공개 9일 차"
+          "stars": 2810,
+          "age_days": 10,
+          "reason": "최근 7일 ★ 약 +1,967 (추정) · 공개 10일 차"
         },
         {
           "repo": "wheresryan22/anatomy",
-          "score": 8.3276,
-          "stars_week": 8779,
+          "score": 8.1066,
+          "stars_week": 8520,
           "stars_week_estimated": true,
-          "stars": 20066,
-          "age_days": 16,
-          "reason": "최근 7일 ★ 약 +8,779 (추정) · 공개 16일 차"
+          "stars": 20692,
+          "age_days": 17,
+          "reason": "최근 7일 ★ 약 +8,520 (추정) · 공개 17일 차"
         },
         {
-          "repo": "kitlangton/scrawl",
-          "score": 7.6033,
-          "stars_week": 564,
+          "repo": "hevnsnt/CVEngine",
+          "score": 7.2995,
+          "stars_week": 194,
           "stars_week_estimated": true,
-          "stars": 725,
-          "age_days": 9,
-          "reason": "최근 7일 ★ 약 +564 (추정) · 공개 9일 차"
-        },
-        {
-          "repo": "xerj-org/xerj",
-          "score": 6.8732,
-          "stars_week": 7783,
-          "stars_week_estimated": false,
-          "stars": 15234,
-          "age_days": 116,
-          "reason": "이번 주 ★ +7,783 · 전체 스타의 51%가 이번 주 유입 · 공개 116일 차"
+          "stars": 194,
+          "age_days": 1,
+          "reason": "최근 7일 ★ 약 +194 (추정) · 공개 일주일 이내"
         }
       ]
     },
@@ -58,49 +58,49 @@
       "name": "개발 도구·CLI·생산성",
       "repos": [
         {
-          "repo": "xevrion/hatchzip",
-          "score": 10.201,
-          "stars_week": 1585,
+          "repo": "storytold/photocraft",
+          "score": 7.8033,
+          "stars_week": 20418,
           "stars_week_estimated": true,
-          "stars": 1585,
-          "age_days": 3,
-          "reason": "최근 7일 ★ 약 +1,585 (추정) · 공개 일주일 이내"
+          "stars": 72922,
+          "age_days": 25,
+          "reason": "최근 7일 ★ 약 +20,418 (추정) · 공개 25일 차"
         },
         {
-          "repo": "storytold/photocraft",
-          "score": 7.9252,
-          "stars_week": 21088,
-          "stars_week_estimated": true,
-          "stars": 72302,
-          "age_days": 24,
-          "reason": "최근 7일 ★ 약 +21,088 (추정) · 공개 24일 차"
+          "repo": "PC2005-cloud/dsh-pet",
+          "score": 7.6603,
+          "stars_week": 2283,
+          "stars_week_estimated": false,
+          "stars": 4153,
+          "age_days": 73,
+          "reason": "이번 주 ★ +2,283 · 전체 스타의 55%가 이번 주 유입 · 공개 73일 차"
         },
         {
           "repo": "ranxianglei/billion-context",
-          "score": 5.7345,
-          "stars_week": 937,
+          "score": 5.5797,
+          "stars_week": 951,
           "stars_week_estimated": false,
-          "stars": 2586,
-          "age_days": 79,
-          "reason": "이번 주 ★ +937 · 전체 스타의 36%가 이번 주 유입 · 공개 79일 차"
+          "stars": 2861,
+          "age_days": 80,
+          "reason": "이번 주 ★ +951 · 전체 스타의 33%가 이번 주 유입 · 공개 80일 차"
         },
         {
-          "repo": "penso/herdr-gpui",
-          "score": 3.5257,
-          "stars_week": 342,
-          "stars_week_estimated": true,
-          "stars": 1661,
-          "age_days": 34,
-          "reason": "최근 7일 ★ 약 +342 (추정) · 공개 34일 차"
+          "repo": "HKUDS/CLI-Anything",
+          "score": 3.6723,
+          "stars_week": 2691,
+          "stars_week_estimated": false,
+          "stars": 57151,
+          "age_days": 231,
+          "reason": "이번 주 ★ +2,691 · 2026년 시작"
         },
         {
-          "repo": "MeteorNOX/DeepSeek-Balance-Whale-Widget",
-          "score": 3.4359,
-          "stars_week": 624,
-          "stars_week_estimated": true,
-          "stars": 5976,
-          "age_days": 67,
-          "reason": "최근 7일 ★ 약 +624 (추정) · 공개 67일 차"
+          "repo": "cursor/plugins",
+          "score": 3.6091,
+          "stars_week": 1390,
+          "stars_week_estimated": false,
+          "stars": 14072,
+          "age_days": 276,
+          "reason": "이번 주 ★ +1,390 · 2026년 시작"
         }
       ]
     },
@@ -110,48 +110,48 @@
       "repos": [
         {
           "repo": "Caho1/open-claude-ui",
-          "score": 7.8128,
-          "stars_week": 976,
+          "score": 7.3586,
+          "stars_week": 897,
           "stars_week_estimated": true,
-          "stars": 1395,
-          "age_days": 10,
-          "reason": "최근 7일 ★ 약 +976 (추정) · 공개 10일 차"
+          "stars": 1410,
+          "age_days": 11,
+          "reason": "최근 7일 ★ 약 +897 (추정) · 공개 11일 차"
         },
         {
           "repo": "deeplethe/solid-glass",
-          "score": 7.4279,
-          "stars_week": 1280,
+          "score": 7.1023,
+          "stars_week": 1206,
           "stars_week_estimated": true,
-          "stars": 2195,
-          "age_days": 12,
-          "reason": "최근 7일 ★ 약 +1,280 (추정) · 공개 12일 차"
+          "stars": 2240,
+          "age_days": 13,
+          "reason": "최근 7일 ★ 약 +1,206 (추정) · 공개 13일 차"
         },
         {
           "repo": "juliobsz/skills",
-          "score": 6.5351,
-          "stars_week": 542,
+          "score": 5.9764,
+          "stars_week": 476,
           "stars_week_estimated": true,
-          "stars": 930,
-          "age_days": 12,
-          "reason": "최근 7일 ★ 약 +542 (추정) · 공개 12일 차"
+          "stars": 952,
+          "age_days": 14,
+          "reason": "최근 7일 ★ 약 +476 (추정) · 공개 14일 차"
         },
         {
           "repo": "shader-effects-inc/shaders",
-          "score": 5.7581,
-          "stars_week": 1513,
+          "score": 5.6721,
+          "stars_week": 1474,
           "stars_week_estimated": true,
-          "stars": 5402,
-          "age_days": 25,
-          "reason": "최근 7일 ★ 약 +1,513 (추정) · 공개 25일 차"
+          "stars": 5474,
+          "age_days": 26,
+          "reason": "최근 7일 ★ 약 +1,474 (추정) · 공개 26일 차"
         },
         {
           "repo": "lucasmarkes/hairline",
-          "score": 5.4547,
-          "stars_week": 864,
+          "score": 5.3797,
+          "stars_week": 861,
           "stars_week_estimated": true,
-          "stars": 2838,
-          "age_days": 23,
-          "reason": "최근 7일 ★ 약 +864 (추정) · 공개 23일 차"
+          "stars": 2953,
+          "age_days": 24,
+          "reason": "최근 7일 ★ 약 +861 (추정) · 공개 24일 차"
         }
       ]
     },
@@ -161,48 +161,48 @@
       "repos": [
         {
           "repo": "shaongitbd/doory",
-          "score": 6.6013,
-          "stars_week": 908,
+          "score": 6.1328,
+          "stars_week": 802,
           "stars_week_estimated": true,
-          "stars": 1816,
-          "age_days": 14,
-          "reason": "최근 7일 ★ 약 +908 (추정) · 공개 14일 차"
+          "stars": 1834,
+          "age_days": 16,
+          "reason": "최근 7일 ★ 약 +802 (추정) · 공개 16일 차"
         },
         {
           "repo": "ChiefGyk3D/Clouds-Against-Humanity",
-          "score": 5.3651,
-          "stars_week": 254,
+          "score": 5.1827,
+          "stars_week": 246,
           "stars_week_estimated": true,
-          "stars": 509,
-          "age_days": 14,
-          "reason": "최근 7일 ★ 약 +254 (추정) · 공개 14일 차"
+          "stars": 528,
+          "age_days": 15,
+          "reason": "최근 7일 ★ 약 +246 (추정) · 공개 15일 차"
         },
         {
           "repo": "jasonxu114514/opencode2api",
-          "score": 4.7175,
-          "stars_week": 386,
+          "score": 3.9811,
+          "stars_week": 269,
           "stars_week_estimated": false,
-          "stars": 1263,
-          "age_days": 71,
-          "reason": "이번 주 ★ +386 · 전체 스타의 31%가 이번 주 유입 · 공개 71일 차"
+          "stars": 1302,
+          "age_days": 73,
+          "reason": "이번 주 ★ +269 · 전체 스타의 21%가 이번 주 유입 · 공개 73일 차"
         },
         {
           "repo": "ollaya-dev/ollaya",
-          "score": 4.3224,
-          "stars_week": 324,
+          "score": 3.5108,
+          "stars_week": 306,
           "stars_week_estimated": true,
-          "stars": 1390,
-          "age_days": 30,
-          "reason": "최근 7일 ★ 약 +324 (추정) · 공개 30일 차"
+          "stars": 1397,
+          "age_days": 32,
+          "reason": "최근 7일 ★ 약 +306 (추정) · 공개 32일 차"
         },
         {
           "repo": "TNTcraftHIM/Piik",
-          "score": 3.18,
-          "stars_week": 386,
+          "score": 3.1772,
+          "stars_week": 388,
           "stars_week_estimated": true,
-          "stars": 3697,
-          "age_days": 67,
-          "reason": "최근 7일 ★ 약 +386 (추정) · 공개 67일 차"
+          "stars": 3765,
+          "age_days": 68,
+          "reason": "최근 7일 ★ 약 +388 (추정) · 공개 68일 차"
         }
       ]
     },
@@ -211,49 +211,49 @@
       "name": "데이터·DB·ML 엔지니어링",
       "repos": [
         {
-          "repo": "kividbio/kividb",
-          "score": 7.9046,
-          "stars_week": 480,
+          "repo": "designfuchen/word-atlas",
+          "score": 9.3244,
+          "stars_week": 841,
           "stars_week_estimated": true,
-          "stars": 549,
-          "age_days": 8,
-          "reason": "최근 7일 ★ 약 +480 (추정) · 공개 8일 차"
+          "stars": 841,
+          "age_days": 0,
+          "reason": "최근 7일 ★ 약 +841 (추정) · 공개 일주일 이내"
+        },
+        {
+          "repo": "kividbio/kividb",
+          "score": 6.9274,
+          "stars_week": 447,
+          "stars_week_estimated": true,
+          "stars": 639,
+          "age_days": 10,
+          "reason": "최근 7일 ★ 약 +447 (추정) · 공개 10일 차"
         },
         {
           "repo": "salihcantekin/ruvio",
-          "score": 5.8223,
-          "stars_week": 128,
+          "score": 5.4671,
+          "stars_week": 122,
           "stars_week_estimated": true,
-          "stars": 165,
-          "age_days": 9,
-          "reason": "최근 7일 ★ 약 +128 (추정) · 공개 9일 차"
+          "stars": 174,
+          "age_days": 10,
+          "reason": "최근 7일 ★ 약 +122 (추정) · 공개 10일 차"
         },
         {
           "repo": "jddevtime/open-lakehouse-compute-fabric",
-          "score": 5.2821,
-          "stars_week": 161,
+          "score": 4.7816,
+          "stars_week": 138,
           "stars_week_estimated": true,
           "stars": 276,
-          "age_days": 12,
-          "reason": "최근 7일 ★ 약 +161 (추정) · 공개 12일 차"
-        },
-        {
-          "repo": "alpcanaydin/tusk",
-          "score": 3.7423,
-          "stars_week": 115,
-          "stars_week_estimated": true,
-          "stars": 409,
-          "age_days": 25,
-          "reason": "최근 7일 ★ 약 +115 (추정) · 공개 25일 차"
+          "age_days": 14,
+          "reason": "최근 7일 ★ 약 +138 (추정) · 공개 14일 차"
         },
         {
           "repo": "ModernRelay/omnigraph",
-          "score": 3.4958,
-          "stars_week": 397,
+          "score": 3.6245,
+          "stars_week": 436,
           "stars_week_estimated": false,
-          "stars": 1728,
-          "age_days": 197,
-          "reason": "이번 주 ★ +397 · 전체 스타의 23%가 이번 주 유입 · 2026년 시작"
+          "stars": 1755,
+          "age_days": 198,
+          "reason": "이번 주 ★ +436 · 전체 스타의 25%가 이번 주 유입 · 2026년 시작"
         }
       ]
     },
@@ -263,48 +263,48 @@
       "repos": [
         {
           "repo": "opentrap/opentrap",
-          "score": 8.345,
-          "stars_week": 414,
+          "score": 8.7146,
+          "stars_week": 541,
           "stars_week_estimated": true,
-          "stars": 414,
-          "age_days": 5,
-          "reason": "최근 7일 ★ 약 +414 (추정) · 공개 일주일 이내"
+          "stars": 541,
+          "age_days": 7,
+          "reason": "최근 7일 ★ 약 +541 (추정) · 공개 일주일 이내"
+        },
+        {
+          "repo": "HOSTED-POWER/php_uploadprogress_guard",
+          "score": 6.9546,
+          "stars_week": 151,
+          "stars_week_estimated": true,
+          "stars": 151,
+          "age_days": 4,
+          "reason": "최근 7일 ★ 약 +151 (추정) · 공개 일주일 이내"
         },
         {
           "repo": "syhunt/php2shell-protection",
-          "score": 6.5319,
-          "stars_week": 111,
+          "score": 6.5805,
+          "stars_week": 115,
           "stars_week_estimated": true,
-          "stars": 111,
-          "age_days": 3,
-          "reason": "최근 7일 ★ 약 +111 (추정) · 공개 일주일 이내"
-        },
-        {
-          "repo": "Haryy985/yunkun-console-preview",
-          "score": 5.5949,
-          "stars_week": 105,
-          "stars_week_estimated": true,
-          "stars": 135,
-          "age_days": 9,
-          "reason": "최근 7일 ★ 약 +105 (추정) · 공개 9일 차"
+          "stars": 115,
+          "age_days": 5,
+          "reason": "최근 7일 ★ 약 +115 (추정) · 공개 일주일 이내"
         },
         {
           "repo": "zero-lab-ai/skills",
-          "score": 5.0242,
-          "stars_week": 151,
+          "score": 4.8023,
+          "stars_week": 141,
           "stars_week_estimated": true,
-          "stars": 281,
-          "age_days": 13,
-          "reason": "최근 7일 ★ 약 +151 (추정) · 공개 13일 차"
+          "stars": 282,
+          "age_days": 14,
+          "reason": "최근 7일 ★ 약 +141 (추정) · 공개 14일 차"
         },
         {
           "repo": "mdpsec/bug-bounty-hunting-prompts",
-          "score": 4.2982,
-          "stars_week": 221,
+          "score": 4.2201,
+          "stars_week": 214,
           "stars_week_estimated": true,
-          "stars": 759,
-          "age_days": 24,
-          "reason": "최근 7일 ★ 약 +221 (추정) · 공개 24일 차"
+          "stars": 766,
+          "age_days": 25,
+          "reason": "최근 7일 ★ 약 +214 (추정) · 공개 25일 차"
         }
       ]
     },
@@ -314,48 +314,48 @@
       "repos": [
         {
           "repo": "Gathin23/cleanyourtv",
-          "score": 14.3159,
-          "stars_week": 30991,
+          "score": 13.26,
+          "stars_week": 31424,
           "stars_week_estimated": true,
-          "stars": 30991,
-          "age_days": 7,
-          "reason": "최근 7일 ★ 약 +30,991 (추정) · 공개 일주일 이내"
+          "stars": 35913,
+          "age_days": 8,
+          "reason": "최근 7일 ★ 약 +31,424 (추정) · 공개 8일 차"
         },
         {
-          "repo": "jhaizhou-ops/d2r-mobile",
-          "score": 8.1838,
-          "stars_week": 2649,
+          "repo": "pengchujin/aerial-tv",
+          "score": 11.8593,
+          "stars_week": 5254,
           "stars_week_estimated": true,
-          "stars": 4541,
-          "age_days": 12,
-          "reason": "최근 7일 ★ 약 +2,649 (추정) · 공개 12일 차"
+          "stars": 5254,
+          "age_days": 5,
+          "reason": "최근 7일 ★ 약 +5,254 (추정) · 공개 일주일 이내"
         },
         {
-          "repo": "google-research/harness2",
-          "score": 8.0303,
-          "stars_week": 7823,
+          "repo": "Zagitta/gpu-unlock",
+          "score": 11.2225,
+          "stars_week": 6402,
           "stars_week_estimated": true,
-          "stars": 18998,
-          "age_days": 17,
-          "reason": "최근 7일 ★ 약 +7,823 (추정) · 공개 17일 차"
+          "stars": 7317,
+          "age_days": 8,
+          "reason": "최근 7일 ★ 약 +6,402 (추정) · 공개 8일 차"
         },
         {
-          "repo": "openai/math",
-          "score": 7.8462,
-          "stars_week": 6371,
+          "repo": "ly05010419/MacNativeGames",
+          "score": 10.8649,
+          "stars_week": 4839,
           "stars_week_estimated": true,
-          "stars": 15473,
-          "age_days": 17,
-          "reason": "최근 7일 ★ 약 +6,371 (추정) · 공개 17일 차"
+          "stars": 5530,
+          "age_days": 8,
+          "reason": "최근 7일 ★ 약 +4,839 (추정) · 공개 8일 차"
         },
         {
-          "repo": "rohit267/net-merge",
-          "score": 7.7875,
-          "stars_week": 1332,
+          "repo": "xevrion/hatchzip",
+          "score": 10.4941,
+          "stars_week": 1959,
           "stars_week_estimated": true,
-          "stars": 2093,
-          "age_days": 11,
-          "reason": "최근 7일 ★ 약 +1,332 (추정) · 공개 11일 차"
+          "stars": 1959,
+          "age_days": 4,
+          "reason": "최근 7일 ★ 약 +1,959 (추정) · 공개 일주일 이내"
         }
       ]
     }
