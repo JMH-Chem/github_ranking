@@ -1,0 +1,24 @@
+{
+  "repo": "man15h/tellyscope",
+  "first_seen": "2026-W44",
+  "url": "https://github.com/man15h/tellyscope",
+  "description": "Debloat your Android TV, install apps, browse and transfer files on it, all from your phone. Just 3 MB, no tracking, no root, no PC.",
+  "homepage": "https://man15h.github.io/tellyscope/",
+  "language": "Kotlin",
+  "topics": [
+    "android",
+    "androidtv",
+    "googletv",
+    "privacy"
+  ],
+  "license": "GPL-3.0",
+  "stars": 1104,
+  "forks": 59,
+  "open_issues": 28,
+  "created_at": "2026-10-22T19:51:46Z",
+  "pushed_at": "2026-10-30T13:35:44Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/13364153?v=4",
+  "last_seen": "2026-W44"
+}

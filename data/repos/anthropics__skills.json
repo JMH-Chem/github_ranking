@@ -1,0 +1,21 @@
+{
+  "repo": "anthropics/skills",
+  "first_seen": "2026-W44",
+  "url": "https://github.com/anthropics/skills",
+  "description": "Public repository for Agent Skills",
+  "homepage": null,
+  "language": "Python",
+  "topics": [
+    "agent-skills"
+  ],
+  "license": null,
+  "stars": 186454,
+  "forks": 22029,
+  "open_issues": 1461,
+  "created_at": "2025-09-22T15:53:31Z",
+  "pushed_at": "2026-10-28T19:20:39Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/76263028?v=4",
+  "last_seen": "2026-W44"
+}

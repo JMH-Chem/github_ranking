@@ -1,0 +1,28 @@
+{
+  "repo": "anhao/ai-pose-gallery-zh",
+  "first_seen": "2026-W44",
+  "url": "https://github.com/anhao/ai-pose-gallery-zh",
+  "description": "中文版 AI 姿势参考图库 · 1439 组 / 2878 张图片 / 完整汉化 · 零依赖静态画廊",
+  "homepage": "https://ai-pose-gallery.anhao.app",
+  "language": "TypeScript",
+  "topics": [
+    "ai-art",
+    "chinese",
+    "cloudflare-pages",
+    "gallery",
+    "i18n",
+    "pose",
+    "reference-images",
+    "static-site"
+  ],
+  "license": null,
+  "stars": 5257,
+  "forks": 1341,
+  "open_issues": 15,
+  "created_at": "2026-10-27T12:24:37Z",
+  "pushed_at": "2026-11-01T17:31:04Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/9844218?v=4",
+  "last_seen": "2026-W44"
+}

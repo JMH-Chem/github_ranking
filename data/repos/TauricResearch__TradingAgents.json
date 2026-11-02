@@ -1,0 +1,25 @@
+{
+  "repo": "TauricResearch/TradingAgents",
+  "first_seen": "2026-W44",
+  "url": "https://github.com/TauricResearch/TradingAgents",
+  "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+  "homepage": "https://arxiv.org/pdf/2412.20138",
+  "language": "Python",
+  "topics": [
+    "agent",
+    "finance",
+    "llm",
+    "multiagent",
+    "trading"
+  ],
+  "license": "Apache-2.0",
+  "stars": 119650,
+  "forks": 22884,
+  "open_issues": 106,
+  "created_at": "2024-12-28T03:31:08Z",
+  "pushed_at": "2026-10-27T08:43:04Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/192884433?v=4",
+  "last_seen": "2026-W44"
+}

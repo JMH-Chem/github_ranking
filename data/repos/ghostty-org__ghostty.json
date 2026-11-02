@@ -1,0 +1,19 @@
+{
+  "repo": "ghostty-org/ghostty",
+  "first_seen": "2026-W44",
+  "url": "https://github.com/ghostty-org/ghostty",
+  "description": "👻 Ghostty is a fast, feature-rich, and cross-platform terminal emulator that uses platform-native UI and GPU acceleration.",
+  "homepage": "https://ghostty.org",
+  "language": "Zig",
+  "topics": [],
+  "license": "MIT",
+  "stars": 63220,
+  "forks": 3818,
+  "open_issues": 255,
+  "created_at": "2022-03-29T17:38:26Z",
+  "pushed_at": "2026-11-02T04:32:50Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/169223740?v=4",
+  "last_seen": "2026-W44"
+}

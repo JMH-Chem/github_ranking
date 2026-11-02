@@ -1,0 +1,27 @@
+{
+  "repo": "NiazMorshed2007/reanimate",
+  "first_seen": "2026-W44",
+  "url": "https://github.com/NiazMorshed2007/reanimate",
+  "description": "A Claude Code skill that reverse-engineers any animation frame by frame, then proves the copy moves the same.",
+  "homepage": null,
+  "language": "JavaScript",
+  "topics": [
+    "agent-skills",
+    "animation",
+    "claude-code",
+    "claude-skills",
+    "frontend",
+    "motion",
+    "playwright"
+  ],
+  "license": "MIT",
+  "stars": 759,
+  "forks": 65,
+  "open_issues": 5,
+  "created_at": "2026-10-29T06:20:59Z",
+  "pushed_at": "2026-10-31T12:49:35Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/77217706?v=4",
+  "last_seen": "2026-W44"
+}

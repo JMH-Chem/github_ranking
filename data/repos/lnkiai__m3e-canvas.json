@@ -1,0 +1,28 @@
+{
+  "repo": "lnkiai/m3e-canvas",
+  "first_seen": "2026-W44",
+  "url": "https://github.com/lnkiai/m3e-canvas",
+  "description": "Sketch Material 3 Expressive screens in the browser and turn them into vibe-coding prompts.",
+  "homepage": "https://lnkiai.github.io/m3e-canvas/",
+  "language": "TypeScript",
+  "topics": [
+    "design-tool",
+    "material-3-expressive",
+    "material-design",
+    "material3",
+    "nextjs",
+    "prompt",
+    "react",
+    "vibe-coding"
+  ],
+  "license": "MIT",
+  "stars": 9983,
+  "forks": 1102,
+  "open_issues": 15,
+  "created_at": "2026-09-02T04:36:34Z",
+  "pushed_at": "2026-11-01T10:57:54Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/187016380?v=4",
+  "last_seen": "2026-W44"
+}

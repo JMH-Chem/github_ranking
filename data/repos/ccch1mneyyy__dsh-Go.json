@@ -1,0 +1,31 @@
+{
+  "repo": "ccch1mneyyy/dsh-Go",
+  "first_seen": "2026-W44",
+  "url": "https://github.com/ccch1mneyyy/dsh-Go",
+  "description": "dsh-go — DeepSeek Harness 装进口袋：手机本机运行，也能遥控你的电脑。",
+  "homepage": null,
+  "language": "Dart",
+  "topics": [
+    "ai-agent",
+    "android",
+    "android-app",
+    "coding-agent",
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "dsh-tui",
+    "flutter",
+    "llm"
+  ],
+  "license": "AGPL-3.0",
+  "stars": 5038,
+  "forks": 246,
+  "open_issues": 213,
+  "created_at": "2026-10-25T08:09:52Z",
+  "pushed_at": "2026-11-02T04:24:56Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/268149062?v=4",
+  "last_seen": "2026-W44"
+}

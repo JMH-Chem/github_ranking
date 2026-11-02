@@ -1,0 +1,27 @@
+{
+  "repo": "YuJunZhiXue/dsh-purge",
+  "first_seen": "2026-W44",
+  "url": "https://github.com/YuJunZhiXue/dsh-purge",
+  "description": "DeepSeek Harness 破甲：让所有模型都能破甲，不同模型可换不同提示词；默认提示词面向国模「小码酱」。Jailbreak for every model — swap prompts per model. 求 Star 收藏 ⭐ 如要二开，请查看署名要求部分",
+  "homepage": null,
+  "language": "JavaScript",
+  "topics": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh-plugin",
+    "dsh-plugins",
+    "harness-jailbreak",
+    "jailbreak",
+    "llm-jailbreak"
+  ],
+  "license": "Apache-2.0",
+  "stars": 15618,
+  "forks": 3585,
+  "open_issues": 8,
+  "created_at": "2026-08-19T07:41:12Z",
+  "pushed_at": "2026-11-01T17:31:26Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/188421097?v=4",
+  "last_seen": "2026-W44"
+}

@@ -1,0 +1,27 @@
+{
+  "repo": "HeyPuter/everything",
+  "first_seen": "2026-W44",
+  "url": "https://github.com/HeyPuter/everything",
+  "description": "We're rebuilding and open-sourcing the world’s software from scratch.",
+  "homepage": null,
+  "language": "JavaScript",
+  "topics": [
+    "adobe",
+    "cad",
+    "microsoft",
+    "office",
+    "photoshop",
+    "saas",
+    "spreadsheet"
+  ],
+  "license": "MIT",
+  "stars": 6373,
+  "forks": 674,
+  "open_issues": 62,
+  "created_at": "2026-10-13T16:18:22Z",
+  "pushed_at": "2026-10-30T15:00:05Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/103972607?v=4",
+  "last_seen": "2026-W44"
+}

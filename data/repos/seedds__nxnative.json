@@ -1,0 +1,19 @@
+{
+  "repo": "seedds/nxnative",
+  "first_seen": "2026-W44",
+  "url": "https://github.com/seedds/nxnative",
+  "description": "Switch games running natively on iPhone, iPad and Mac: an NSP folder becomes an unsigned IPA (NSO rewriter, Horizon HLE host, NVN→Metal)",
+  "homepage": null,
+  "language": "Python",
+  "topics": [],
+  "license": "MIT",
+  "stars": 11067,
+  "forks": 1801,
+  "open_issues": 353,
+  "created_at": "2026-10-13T05:20:14Z",
+  "pushed_at": "2026-11-02T05:06:46Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/3463322?v=4",
+  "last_seen": "2026-W44"
+}

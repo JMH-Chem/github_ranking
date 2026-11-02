@@ -1,0 +1,28 @@
+{
+  "repo": "zeabur-oss/zeabur",
+  "first_seen": "2026-W44",
+  "url": "https://github.com/zeabur-oss/zeabur",
+  "description": "Self-hosted PaaS on your own Kubernetes.",
+  "homepage": "https://oss.zeabur.com",
+  "language": "Rust",
+  "topics": [
+    "databases",
+    "deployment",
+    "docker-compose",
+    "internal-developer-platform",
+    "kubernetes",
+    "paas",
+    "self-hosted",
+    "zeabur"
+  ],
+  "license": "Apache-2.0",
+  "stars": 599,
+  "forks": 102,
+  "open_issues": 19,
+  "created_at": "2026-10-24T07:25:39Z",
+  "pushed_at": "2026-11-02T05:52:52Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/347201155?v=4",
+  "last_seen": "2026-W44"
+}

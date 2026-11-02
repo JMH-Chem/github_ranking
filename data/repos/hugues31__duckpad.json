@@ -1,0 +1,22 @@
+{
+  "repo": "hugues31/duckpad",
+  "first_seen": "2026-W44",
+  "url": "https://github.com/hugues31/duckpad",
+  "description": "The data transformation tool the open-source community deserves.",
+  "homepage": "https://hugues31.github.io/duckpad/",
+  "language": "Python",
+  "topics": [
+    "data-engineering",
+    "duckdb"
+  ],
+  "license": "MIT",
+  "stars": 290,
+  "forks": 6,
+  "open_issues": 1,
+  "created_at": "2026-10-25T07:57:16Z",
+  "pushed_at": "2026-11-01T21:55:49Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/19244704?v=4",
+  "last_seen": "2026-W44"
+}

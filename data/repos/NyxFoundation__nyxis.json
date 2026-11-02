@@ -1,0 +1,29 @@
+{
+  "repo": "NyxFoundation/nyxis",
+  "first_seen": "2026-W44",
+  "url": "https://github.com/NyxFoundation/nyxis",
+  "description": "A Lean backend framework whose authorization safety is formally proven. The developer writes only a Cedar schema and policies; handlers are built on Supabase Auth and PostgreSQL.",
+  "homepage": null,
+  "language": "Lean",
+  "topics": [
+    "access-control",
+    "authorization",
+    "backend-framework",
+    "cedar",
+    "formal-verification",
+    "lean4",
+    "postgresql",
+    "security",
+    "supabase"
+  ],
+  "license": "MIT",
+  "stars": 318,
+  "forks": 13,
+  "open_issues": 15,
+  "created_at": "2026-10-26T04:26:18Z",
+  "pushed_at": "2026-10-31T03:35:42Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/220889498?v=4",
+  "last_seen": "2026-W44"
+}

@@ -1,0 +1,28 @@
+{
+  "repo": "nightly-labs/openbot",
+  "first_seen": "2026-W44",
+  "url": "https://github.com/nightly-labs/openbot",
+  "description": "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
+  "homepage": "https://openbot.run/",
+  "language": "TypeScript",
+  "topics": [
+    "ai-agents",
+    "bun",
+    "codex",
+    "electron",
+    "local-first",
+    "macos",
+    "solidjs",
+    "typescript"
+  ],
+  "license": null,
+  "stars": 4573,
+  "forks": 472,
+  "open_issues": 502,
+  "created_at": "2026-08-12T21:32:03Z",
+  "pushed_at": "2026-11-02T05:54:25Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/100160810?v=4",
+  "last_seen": "2026-W44"
+}

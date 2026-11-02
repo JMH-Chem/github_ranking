@@ -1,0 +1,30 @@
+{
+  "repo": "indexable-inc/blaze",
+  "first_seen": "2026-W44",
+  "url": "https://github.com/indexable-inc/blaze",
+  "description": "Incremental rust builds up to 92x faster than cargo/rustc",
+  "homepage": "https://ix.dev/blaze",
+  "language": "Rust",
+  "topics": [
+    "cargo",
+    "compiler",
+    "cranelift",
+    "developer-tools",
+    "hot-reload",
+    "incremental-compilation",
+    "jit",
+    "live-coding",
+    "rust",
+    "rust-analyzer"
+  ],
+  "license": "Apache-2.0",
+  "stars": 1876,
+  "forks": 65,
+  "open_issues": 456,
+  "created_at": "2026-10-19T23:31:09Z",
+  "pushed_at": "2026-11-02T03:29:59Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/263587422?v=4",
+  "last_seen": "2026-W44"
+}

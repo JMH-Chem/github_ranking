@@ -1,0 +1,28 @@
+{
+  "repo": "fjaeckel/seriesoftubes",
+  "first_seen": "2026-W44",
+  "url": "https://github.com/fjaeckel/seriesoftubes",
+  "description": "A free cartoon browser game about how the internet really works: lay fiber and subsea cables, peer at IXPs, bill on the 95th percentile and survive backhoes, sharks and route leaks on your way to Tier 1.",
+  "homepage": "https://seriesoftub.es/",
+  "language": "JavaScript",
+  "topics": [
+    "bgp",
+    "browser-gam",
+    "educational",
+    "game",
+    "internet",
+    "networking",
+    "peering",
+    "simulation"
+  ],
+  "license": "MIT",
+  "stars": 163,
+  "forks": 37,
+  "open_issues": 37,
+  "created_at": "2026-10-23T06:47:11Z",
+  "pushed_at": "2026-11-01T21:17:05Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/273436?v=4",
+  "last_seen": "2026-W44"
+}

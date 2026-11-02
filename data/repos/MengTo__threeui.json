@@ -1,0 +1,25 @@
+{
+  "repo": "MengTo/threeui",
+  "first_seen": "2026-W44",
+  "url": "https://github.com/MengTo/threeui",
+  "description": "Open-source ThreeUI Community catalog with live interactive components and complete Community source.",
+  "homepage": "https://threeui.com",
+  "language": "HTML",
+  "topics": [
+    "react",
+    "shaders",
+    "threejs",
+    "ui-components",
+    "webgl"
+  ],
+  "license": "MIT",
+  "stars": 7012,
+  "forks": 658,
+  "open_issues": 8,
+  "created_at": "2026-08-21T11:56:39Z",
+  "pushed_at": "2026-09-03T05:36:26Z",
+  "archived": false,
+  "is_fork": false,
+  "owner_avatar": "https://avatars.githubusercontent.com/u/1065452?v=4",
+  "last_seen": "2026-W44"
+}
